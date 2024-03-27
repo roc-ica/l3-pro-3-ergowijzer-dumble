@@ -1,0 +1,91 @@
+:root {
+  --grey: #aaaaaa;
+  --lightgrey: #d1d1d1;
+  --background: #d9d9d9;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background: var(--background);
+}
+
+main {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header {
+  background: var(--grey);
+  height: 10vh;
+  margin: 0;
+  padding: 0;
+}
+
+.home-container {
+  background: var(--lightgrey);
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.picture {
+  max-height: 35vh;
+  border: 0.05rem solid var(--grey);
+}
+
+.steps-container {
+  background: var(--lightgrey);
+  height: 40vh;
+  padding: 2rem;
+  display: flex;
+}
+.steps {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.5rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.step1 {
+  background: rgb(157, 157, 157);
+}
+
+.step2 {
+  background: rgb(137, 137, 137);
+}
+
+.step3 {
+  background: rgb(117, 117, 117);
+}
+
+.video-container{
+  background-color: #DEDEDE;
+  
+}
+
+@media only screen and (max-width: 800px) {
+  .step {
+    font-size: 1rem;
+  }
+}
