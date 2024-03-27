@@ -19,6 +19,7 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
+    height: 400px;
     background-color: #3333331A;
     gap: 20px;
   
@@ -42,8 +43,8 @@
   
   }
   .box p {
-    margin: 15px;
-    margin-right: 100px;
+    margin: 1%;
+    margin-right: 20%; 
     font-size: 20px;
     font-family: arial;
   }
@@ -205,4 +206,45 @@
     margin-left: 450px;
   }
   
-  
+/* responsieve for 1020px */
+
+@media screen and (max-width: 1030px) {
+
+  .videobox{
+    left: 0%;
+  }
+
+  .border{
+    margin-left: 20%;
+  }
+
+}
+
+/* responsieve for 900px*/
+
+@media screen and (max-width: 900px) {
+
+  .box-home{
+    transition: all ease 0.5s;
+    flex-direction: column;
+  }
+
+  .align{
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .box{
+    position: relative;
+    width: 100%;
+  }
+
+  .box2{
+    left: 0;
+    bottom: 80px;
+  }
+
+  .box3{
+    left: 0;
+    bottom: 150px;
+  }
+}
