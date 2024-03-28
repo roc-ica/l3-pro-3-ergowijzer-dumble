@@ -84,28 +84,42 @@ header {
 .video-container {
   display: flex;
   background-color: #d8c2c2;
-  background-color: blue;
+  /* background-color: blue; */
   width: 100%;
+  padding-bottom: 150px;
 }
+
 @media screen and (max-width: 1000px) {
-  .video-container{
+  .video-container {
     height: 1500px;
-    display: flow-root;
+   display: flex;
+   flex-direction: column;
+   overflow-x: hidden;
+   padding-bottom: 0px;
   }
   .videobox {
-    margin-right:auto;
+    margin-right: auto;
     margin-left: auto;
     left: 0% !important;
     bottom: 0;
-
+    position: static !important;
   }
-  .videobox img{
-  z-index: 0 !important;
-  left: 40% !important;
-  padding-bottom: 270px !important;
+  .video-container img {
+    left: 15% !important;
+    padding-bottom: 270px !important;
+    width: 350px !important;
+    height: 350px !important;
+    margin-top: 100px;
+    top: 253%;
+  }
+  .video{
+    margin: 0px;
+    margin-left: 0% !important;
+    left: 30px;
+    
+  }
 }
-}
-.videobox img{
+.videobox img {
   padding-bottom: 270px !important;
 }
 
@@ -114,11 +128,11 @@ header {
   height: 500px;
   z-index: 1;
   position: absolute;
-  left: 63%;
+  left: 70%;
 }
 
 .video {
-  position: relative;
+  /* position: relative; */
   width: 600px;
   height: 350px;
   background-color: #e5e7dd;
@@ -129,6 +143,7 @@ header {
 }
 
 .videobox {
+  position:absolute;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -140,10 +155,9 @@ header {
   border: 1px solid black;
   margin-bottom: 40px;
   left: 70%;
-  z-index: 2; 
+  z-index: 2;
   box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.25);
 }
-
 
 .link {
   text-align: center;
@@ -254,25 +268,22 @@ textarea {
   margin-left: 40%;
   box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.25);
   z-index: 100;
-
 }
 
 /* responsieve for 1020px */
-
 
 @media screen and (max-width: 1030px) {
   .container {
     display: flex;
     flex-direction: column;
-    
   }
 
   .border {
     margin-left: 20%;
   }
-  
-  .box-home img{
-   display: none;
+
+  .box-home img {
+    display: none;
   }
 }
 
@@ -288,18 +299,18 @@ textarea {
     flex-direction: column;
     margin-left: 0;
   }
-  .home-container{
+  .home-container {
     padding-left: 0px;
   }
   .box {
     position: relative;
     width: 100%;
     border-radius: 50px;
-    box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-bottom: 10px
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 10px;
   }
-  .box h2{
-    margin-bottom: 10px
+  .box h2 {
+    margin-bottom: 10px;
   }
   .box1 {
     left: 0;
