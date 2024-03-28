@@ -15,7 +15,7 @@ header {
 .home-container img {
   height: 300px;
   width: auto;
-  margin: 20px;
+  margin: 00px;
 }
 .box-home {
   display: flex;
@@ -84,6 +84,29 @@ header {
 .video-container {
   display: flex;
   background-color: #d8c2c2;
+  background-color: blue;
+  width: 100%;
+}
+@media screen and (max-width: 1000px) {
+  .video-container{
+    height: 1500px;
+    display: flow-root;
+  }
+  .videobox {
+    margin-right:auto;
+    margin-left: auto;
+    left: 0% !important;
+    bottom: 0;
+
+  }
+  .videobox img{
+  z-index: 0 !important;
+  left: 40% !important;
+  padding-bottom: 270px !important;
+}
+}
+.videobox-circle{
+  padding-bottom: 270px !important;
 }
 
 .video-container img {
@@ -95,6 +118,7 @@ header {
 }
 
 .video {
+  position: relative;
   width: 600px;
   height: 350px;
   background-color: #e5e7dd;
@@ -106,7 +130,6 @@ header {
 
 .videobox {
   display: flex;
-  position: relative;
   justify-content: space-around;
   flex-direction: column;
   width: 350px;
@@ -116,10 +139,11 @@ header {
   border-radius: 50px;
   border: 1px solid black;
   margin-bottom: 40px;
-  left: 10%;
-  z-index: 2;
+  left: 70%;
+  z-index: 2; 
   box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.25);
 }
+
 
 .link {
   text-align: center;
@@ -235,9 +259,12 @@ textarea {
 
 /* responsieve for 1020px */
 
+
 @media screen and (max-width: 1030px) {
-  .videobox {
-    left: 0%;
+  .container {
+    display: flex;
+    flex-direction: column;
+    
   }
 
   .border {
