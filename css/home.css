@@ -24,6 +24,8 @@ header {
   height: 400px;
   background-color: #3333331a;
   gap: 20px;
+  padding-top: 5%;
+  /* margin-top: 2; */
 }
 .box {
   height: 250px;
