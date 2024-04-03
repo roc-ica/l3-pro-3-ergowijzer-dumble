@@ -1,8 +1,11 @@
+* {
+  cursor: none;
+}
 body {
   padding: 0px;
   margin: 0px;
   overflow-x: hidden;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
 }
 
 h1{
@@ -17,6 +20,43 @@ h1{
 /* =============================== */
 /* =           HEADER            = */
 /* =============================== */
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 1px solid black;
+  transition: all 200ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  z-index: 9999;
+}
+
+.cursor2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #fff;
+  opacity: .3;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width .3s, height .3s, opacity .3s;
+  z-index: 999;
+}
+
+.hover {
+  background-color: var(--first-color);
+  opacity: 0.5;
+}
+
+.cursorinnerhover {
+  width: 50px;
+  height: 50px;
+  opacity: .5;
+}
 
 /* Header */
 .header {
@@ -91,6 +131,8 @@ h1{
 
 .nav__link:hover {
   color: #fff;
+  transition: all .3s ease;
+
 }
 
 /* =============================== */
@@ -126,6 +168,17 @@ h1{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.box-home img {
+  height: 300px;
+  width: auto;
+  margin: 0;
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.box-home img:hover {
+  transform: scale(1.1); /* Scale the image up by 10% on hover */
 }
 
 .box h2 {
@@ -304,43 +357,41 @@ input[type="text"],
 input[type="email"],
 textarea {
   background: #f3f4ec;
-  border-radius: 50px;
+  border-radius: 8px; /* Adjust border-radius */
   padding: 20px;
   color: black;
   font-weight: bold;
   border: 0px;
   margin-bottom: 10px;
   width: 90%;
-  margin-right: 20px; /* Added margin-right for better spacing */
-  outline-color: #989898;
+  
 }
 
 input[type="submit"] {
-  padding: 20px;
-  border-radius: 50px;
-  width: 97%; /* Changed from 500px to 100% */
-  margin-top: 10px; /* Added margin-top for spacing */
-  background-color: #f3f4ec;
-  border: 0px;
+  padding: 15px 30px; /* Increase padding */
+  border-radius: 8px; /* Adjust border-radius */
+  width: 95%; /* Set width to 100% */
+  margin-top: 20px; /* Adjust margin-top */
+  background-color: #f3f4ec; /* Change background color */
+  border: none;
   font-weight: bold;
-  color: grey;
+  color: black; /* Change text color to white */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box-shadow for depth */
+  transition: all .5s ease; /* Add transition for smooth hover effect */
 }
 
 input[type="submit"]:hover {
-  background-color: #ffffff69;
-  transition: all ease 0.5s;
-  cursor: pointer;
-  color: black;
+  background-color: #b9bab4; /* Darken background color on hover */
 }
+
 
 textarea {
   background: #f3f4ec;
   resize: none;
-  border-radius: 50px;
+  border-radius: 8px; /* Adjust border-radius */
   padding: 20px;
   font-weight: bold;
   border: 0px;
-  margin-right: 20px; /* Added margin-right for better spacing */
   font-weight: bold;
 }
 

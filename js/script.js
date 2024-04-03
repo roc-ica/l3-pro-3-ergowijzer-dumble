@@ -136,4 +136,76 @@ window.addEventListener('load', function() {
       duration: 2
     });
 });
+window.addEventListener('load', function() {
+  // Select all images inside the box-home
+  var boxHomeImages = document.querySelectorAll('.box-home img');
+
+  // Add event listeners to each image
+  boxHomeImages.forEach(function(image) {
+      // Add mouseover event listener
+      image.addEventListener('mouseover', function() {
+          // Scale up the image on hover
+          image.style.transform = 'scale(1.1)';
+          image.style.transition = 'transform 0.3s ease'; // Add transition for smooth animation
+      });
+
+      // Add mouseout event listener
+      image.addEventListener('mouseout', function() {
+          // Reset the image back to its original size on mouseout
+          image.style.transform = 'scale(1)';
+      });
+  });
+});
+
+/////////////////emailJS//////////////
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // these IDs from the previous steps
+  emailjs.sendForm('service_60deunq', 'template_kz34zom', this, 'h4AhsFG7Qvdnthqgk')
+    .then(function() {
+      console.log('SUCCESS!');
+    }, function(error) {
+      console.log('FAILED...', error);
+    });
+});
+
+/////////////////magic mouse///////////////
+// UPDATE: I was able to get this working again... Enjoy!
+
+var cursor = document.querySelector('.cursor');
+var cursorinner = document.querySelector('.cursor2');
+var a = document.querySelectorAll('a');
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursorinner.style.left = x + 'px';
+  cursorinner.style.top = y + 'px';
+});
+
+document.addEventListener('mousedown', function(){
+  cursor.classList.add('click');
+  cursorinner.classList.add('cursorinnerhover')
+});
+
+document.addEventListener('mouseup', function(){
+  cursor.classList.remove('click')
+  cursorinner.classList.remove('cursorinnerhover')
+});
+
+a.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    cursor.classList.add('hover');
+  });
+  item.addEventListener('mouseleave', () => {
+    cursor.classList.remove('hover');
+  });
+})
 

@@ -12,6 +12,8 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
     </head>
     <body>
+      <div class="cursor"></div>
+      <div class="cursor2"></div>
       <section class="Header__section">
         <header class="header" id="header">
           <nav class="nav__container">
@@ -96,14 +98,16 @@
         <img src="img/circle2.png" alt="" id="circle2">
       </div>
         <div class="border">
-            <form class="form">
-                <input id="input" type="text" placeholder="Name"><br>
-                <input id="input" type="email" placeholder="Email"><br>
-                <textarea id="input" cols="30" rows="10" placeholder="Message"></textarea>
-                <input type="submit" value="Submit">
+            <form class="form" id="contact-form">
+                <input id="input" type="text" name="name" placeholder="Your Name" required>
+                <input id="input" type="email" name="email" placeholder="Your Email" required>
+                <textarea id="input" cols="30" rows="10" name="message" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send">
             </form>
         </div>
     </section>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="js/script.js"></script>
