@@ -14,7 +14,12 @@
     <body>
       <div class="cursor"></div>
       <div class="cursor2"></div>
-      <section class="Header__section">
+      <!-- Scroll to top button with Remixicon -->
+      <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">
+        <i class="ri-arrow-up-s-line"></i> <!-- Remixicon arrow-up icon -->
+        
+      </button>
+        <section class="Header__section">
         <header class="header" id="header">
           <nav class="nav__container">
               <div class="nav__menu" id="nav-menu">
@@ -24,15 +29,15 @@
                   </li>
     
                   <li class="nav__item magic-hover magic-hover__square">
-                      <a href="#products" class="nav__link">Steps</a>
+                      <a href="#section-1" class="nav__link">Steps</a>
                   </li>
     
                   <li class="nav__item magic-hover magic-hover__square">
-                      <a href="#" class="nav__link">Video's</a>
+                      <a href="#section-2" class="nav__link">Video's</a>
                   </li>
     
                   <li class="nav__item magic-hover magic-hover__square">
-                      <a href="#contact" class="nav__link nav__link-button ">Contact</a>
+                      <a href="#section-3" class="nav__link nav__link-button ">Contact</a>
                   </li>
               </ul>
               </div>
@@ -47,7 +52,7 @@
           <img src="img/person4.png" alt="" class="person4 row2" />
         </div>
         <main>
-        <div class="align">
+        <div class="align" id="section-1">
           <div class="box1 box">
             <h2>Step 1</h2>
             <p>
@@ -72,7 +77,7 @@
           </div>
         </div>
         
-      <section class="video-container">
+      <section class="video-container"  id="section-2">
     
         <div class="video">
           <video id="my-video" src="#"></video>
@@ -92,7 +97,7 @@
         </div>
   </section>
     </main>
-      <section class="contact-container">
+      <section class="contact-container"  id="section-3">
         <div class="image-container">
         <img src="img/circle1.png" alt="" id="circle1">
         <img src="img/circle2.png" alt="" id="circle2">
@@ -104,6 +109,36 @@
                 <textarea id="input" cols="30" rows="10" name="message" placeholder="Your Message" required></textarea>
                 <input type="submit" value="Send">
             </form>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <h2>Follow us</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                    <a href="#"><i class="ri-linkedin-fill"></i></a>
+                </div>
+            </div>
+            <div class="footer-content">
+                <h2>Company</h2>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help desk</a></li>
+                    <li><a href="#">Forums</a></li>
+                </ul>
+            </div>
         </div>
     </section>
     

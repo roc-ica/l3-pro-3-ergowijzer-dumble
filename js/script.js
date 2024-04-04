@@ -209,3 +209,42 @@ a.forEach(item => {
   });
 })
 
+/////////////////scroll to top///////////////
+  // JavaScript for scroll-to-top button functionality
+  var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  window.addEventListener("scroll", scrollFunction);
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      scrollToTopBtn.style.display = "block";
+      gsap.to(scrollToTopBtn, { opacity: 1, scale: 1, ease: "power2.out" }); // Added easing
+    } else {
+      gsap.to(scrollToTopBtn, { opacity: 0, scale: 0, onComplete: function() {
+        scrollToTopBtn.style.display = "none";
+      } });
+    }
+  }
+
+  function topFunction() {
+    var currentPosition = window.scrollY || window.pageYOffset;
+    var targetPosition = 0;
+    var duration = 500; // Duration of the scroll animation in milliseconds
+    var startTime = null;
+  
+    function scrollToTop(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = timestamp - startTime;
+      var easeInOutQuad = progress < duration ? progress / (duration / 2) : 1;
+  
+      window.scrollTo(0, currentPosition + (targetPosition - currentPosition) * easeInOutQuad);
+  
+      if (progress < duration) {
+        requestAnimationFrame(scrollToTop);
+      }
+    }
+  
+    requestAnimationFrame(scrollToTop);
+  }
+  
+  
