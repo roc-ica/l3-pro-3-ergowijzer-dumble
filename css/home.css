@@ -309,18 +309,18 @@ h1{
 .video-container {
   display: flex;
   background-color: #d8c2c2;
-  /* background-color: blue; */
   width: 100%;
   padding-bottom: 150px;
 }
 
 @media screen and (max-width: 1000px) {
   .video-container {
-    height: 1500px;
-   display: flex;
-   flex-direction: column;
-   overflow-x: hidden;
-   padding-bottom: 0px;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    padding-bottom: 0px;
+    flex-wrap: wrap; /* Add this line to wrap the video containers */
   }
   .videobox {
     margin-right: auto;
@@ -336,12 +336,6 @@ h1{
     height: 350px !important;
     margin-top: 100px;
     top: 253%;
-  }
-  .video{
-    margin: 0px;
-    margin-left: 0% !important;
-    left: 30px;
-    
   }
 }
 .videobox img {
@@ -505,10 +499,6 @@ textarea {
   .border {
     margin-left: 20%;
   }
-
-  .box-home img {
-    display: none;
-  }
 }
 /* =============================== */
 /* =           FOOTER            = */
@@ -542,10 +532,7 @@ textarea {
   text-transform: uppercase; /* Uppercase text */
 }
 
-/* Social icons */
-.social-icons {
-  display: flex;
-}
+
 
 .social-icons a {
   color: #fff; /* Icon color */
@@ -583,6 +570,11 @@ ul li a:hover {
 /* responsieve for 900px*/
 
 @media screen and (max-width: 900px) {
+  .body{
+    height: 100vh;
+    width: 100vw;
+
+  }
   .box-home {
     transition: all ease 0.5s;
     flex-direction: column;
@@ -602,18 +594,23 @@ ul li a:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-bottom: 10px;
   }
+  .box-home {
+    flex-direction: row; /* Arrange images side by side */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+    justify-content: center; /* Center the images horizontally */
+  }
+
+  .box-home img {
+    width: calc(25%); /* Set the width to occupy approximately one-third of the container with spacing */
+    max-width: 150px; /* Set a maximum width for responsiveness */
+    height: auto; /* Allow the height to adjust proportionally */
+    margin: 10px; /* Add some margin for spacing */
+  }
   .box h2 {
     margin-bottom: 10px;
   }
-  .box1 {
-    left: 0;
-  }
-  .box2 {
-    left: 0;
-    bottom: 0px;
-  }
-
-  .box3 {
+  .box1, .box2, .box3 {
+    height: auto;
     left: 0;
     bottom: 0px;
   }
@@ -624,6 +621,125 @@ ul li a:hover {
     display: none;
   }
   .cursorinnerhover {
+    display: none;
+  }
+  .video-container img {
+    display: none;
+  }
+  .video {
+    width: 75%;
+    margin-top: 20px;
+    padding: 20px; /* Add white space around the video */
+  }
+  
+
+  
+  .link {
+    width: 80%;
+    margin: 0 auto; /* Center the element horizontally */
+    margin-bottom: 20px;
+  }
+  .header {
+    width: 100dvw;
+  }
+
+  .form {
+    padding: 20px;
+    border-radius: 0;
+  }
+  .footer {
+    padding: 20px 0;
+  }
+
+
+  .box-home {
+    transition: all ease 0.5s;
+    flex-direction: column;
+  }
+
+  .align {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .home-container {
+    padding-left: 0px;
+  }
+  .box {
+    position: relative;
+    width: calc(100% - 40px); /* Adjust width to fit within viewport */
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 10px;
+    margin-left: auto; /* Center the box horizontally */
+    margin-right: auto;
+  }
+  .box h2 {
+    margin-bottom: 10px;
+  }
+  .box1, .box2, .box3 {
+    height: auto;
+    left: 0;
+    bottom: 0px;
+  }
+  .cursor,
+  .cursor2,
+  .cursorinnerhover,
+  .video-container img {
+    display: none; /* Hide unnecessary elements */
+  }
+  .video {
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+  }
+  .videobox {
+    width: 80%;
+    height: 500px;
+    margin: 10px auto; /* Center the element horizontally */
+    margin-left: 50px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #my-video{
+    width: 90%;
+    height: 100%;
+    background-color: #333;
+  }
+  .link {
+    width: calc(80% - 40px); /* Adjust width to fit within viewport */
+    margin: 0 auto; /* Center the element horizontally */
+    margin-bottom: 20px;
+  }
+
+  /* Adjust footer styles for better usability on mobile */
+  .footer-container {
+    flex-direction: column;
+    text-align: center; /* Center footer content */
+  }
+
+  .footer-content {
+    padding: 20px 0; /* Adjust padding for better spacing */
+  }
+
+  .social-icons {
+    margin-bottom: 20px; /* Add margin at the bottom for better separation */
+  }
+
+  ul {
+    padding-left: 0; /* Remove default padding */
+    text-align: center; /* Center list items */
+  }
+
+  ul li {
+    margin-bottom: 10px; /* Adjust margin for better spacing */
+  }
+
+  ul li a {
+    display: block; /* Ensure links occupy full width */
+  }
+  .person4 {
     display: none;
   }
 }

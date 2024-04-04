@@ -161,15 +161,21 @@ window.addEventListener('load', function() {
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault();
 
-  // these IDs from the previous steps
-  emailjs.sendForm('service_60deunq', 'template_kz34zom', this, 'h4AhsFG7Qvdnthqgk')
-    .then(function() {
-      console.log('SUCCESS!');
-    }, function(error) {
-      console.log('FAILED...', error);
-    });
+  // Check if the form has already been submitted in the current session
+  if (!sessionStorage.getItem('formSubmitted')) {
+    // these IDs from the previous steps
+    emailjs.sendForm('service_60deunq', 'template_kz34zom', this, 'h4AhsFG7Qvdnthqgk')
+      .then(function() {
+        console.log('SUCCESS!');
+        // Mark the form as submitted in the current session
+        sessionStorage.setItem('formSubmitted', 'true');
+      }, function(error) {
+        console.log('FAILED...', error);
+      });
+  } else {
+    console.log('Form already submitted in this session.');
+  }
 });
-
 /////////////////magic mouse///////////////
 // UPDATE: I was able to get this working again... Enjoy!
 
