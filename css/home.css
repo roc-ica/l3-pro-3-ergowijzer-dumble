@@ -224,7 +224,7 @@ h1{
 /* =============================== */
 
 .home-container {
-  background-color: #e3c9c9;
+  background-color: #C9DAE3;
   padding: 0px;
 }
 .home-container img {
@@ -312,7 +312,7 @@ h1{
 
 .video-container {
   display: flex;
-  background-color: #d8c2c2;
+  background-color: #A6C7D8;
   width: 100%;
   padding-bottom: 150px;
 }
@@ -409,7 +409,7 @@ h1{
 .contact-container {
   display: flex;
   align-items: flex-start; /* Changed from 'center' to 'flex-start' */
-  background-color: #d8caca;
+  background-color: #9CBBCB;
   padding-top: 50px;
   justify-content: flex-end;
 }
