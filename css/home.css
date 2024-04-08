@@ -153,6 +153,10 @@ h1{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease; /* Add transition for smooth animation */
 }
+.header img{
+  width:115px; 
+  overflow:hidden;
+}
 .nav-up {
   transform: translateY(-100%); /* Slide the header up */
 }
