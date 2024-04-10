@@ -1,160 +1,294 @@
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="css/home.css" rel="stylesheet" />
-      <title>Ergowijzer Homepage</title>
-      <!--=============== FAVICON ===============-->
-      <link rel="shortcut icon" href="img/icons8-circled-i-32.png" type="image/x-icon">
-      <!--=============== REMIXICONS ===============-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
-    </head>
-    <body>
-      <div class="cursor"></div>
-      <div class="cursor2"></div>
-      <!-- Scroll to top button with Remixicon -->
-      <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">
-        <i class="ri-arrow-up-s-line"></i> <!-- Remixicon arrow-up icon -->
-        
-      </button>
-        <section class="Header__section">
-        <header class="header" id="header">
-          <!-- <img src="img/Removal-513.png" alt="logo"/> -->
-          <nav class="nav__container">
-              <div class="nav__menu" id="nav-menu">
-              <ul class="nav__list magic-hover magic-hover__square">
-                  <li class="nav__item">
-                      <a href="#" class="nav__link">Home</a>
-                  </li>
-    
-                  <li class="nav__item magic-hover magic-hover__square">
-                      <a href="#section-1" class="nav__link">Steps</a>
-                  </li>
-    
-                  <li class="nav__item magic-hover magic-hover__square">
-                      <a href="#section-2" class="nav__link">Video's</a>
-                  </li>
-    
-                  <li class="nav__item magic-hover magic-hover__square">
-                      <a href="#section-3" class="nav__link nav__link-button ">Contact</a>
-                  </li>
-              </ul>
-              </div>
-          </nav>
-      </header>
-      </section>
-      <section class="home-container">
-        <div class="box-home">
-          <img src="img/person1.png" alt="" class="person1 row1" />
-          <img src="img/person2.png" alt="" class="person2 row1" />
-          <img src="img/person3.png" alt="" class="person3 row2" />
-          <img src="img/person4.png" alt="" class="person4 row2" />
-        </div>
-        <main>
-        <div class="align" id="section-1">
-          <div class="box1 box">
-            <h2>Step 1</h2>
-            <p>
-              Actieve zitstoel: Een stoel die actief zitten bevordert, helpt bij het verbeteren van de houding en het verminderen van rugklachten tijdens lange periodes van zitten.
-            </p>
-          </div>
-          <div class="box2 box">
-            <h2>Step 2</h2>
-            <p>
-              Staand bureau: Afwisselen tussen zitten en staan met een verstelbaar bureau verbetert de bloedcirculatie, vermindert rugbelasting en verhoogt de energie gedurende de dag.
-            </p>
-          </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Care: Ergonomic Computer Use</title>
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="dynamic-background">
+    <div class="dynamic-shapes">
+      <div class="dynamic-shape circle"></div>
+      <div class="dynamic-shape triangle"></div>
+      <div class="dynamic-shape rectangle"></div>
+    </div>
+  </div>
+  <button id="scrollUpButton" class="hidden"><i class="fas fa-chevron-up"></i></button>
+  <header>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#info">Info</a>
+        <a href="#risks">Risks</a>
+        <a href="#carousel">Carousel</a>
+        <a href="#additional-info">Additional Info</a>
+        <a href="#helpful-products">Products</a>
+        <a href="#videos">Videos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+  </header>
 
-          <div class="box3 box">
-            <h2>Step 3</h2>
-            <p>
-              Ergonomische muis en toetsenbord: Het gebruik van ergonomische muizen en toetsenborden vermindert de belasting op polsen en handen, waardoor werkgerelateerde blessures zoals carpaal tunnelsyndroom worden voorkomen.
-            </p>
-          </div>
-        </div>
-        
-      <section class="video-container"  id="section-2">
-    
-        <div class="video">
-          <video id="my-video" src="#"></video>
-        </div>
-        <div class="videobox">
-          <div class="link1 link">
-            <h2 id="video-link-1">Video link</h2>
-            <p>Information about the product</p>
-          </div>
-          <div class="link2 link">
-            <h2 id="video-link-2">Video link</h2>
-            <p>Information about the product</p>
-          </div>
-          <div class="link3 link">
-          <h1>Coming soon</h1>
-          </div>
-        </div>
-  </section>
-    </main>
-      <section class="contact-container"  id="section-3">
-        <div class="image-container">
-        <img src="img/circle1.png" alt="" id="circle1">
-        <img src="img/circle2.png" alt="" id="circle2">
-      </div>
-        <div class="border">
-            <form class="form" id="contact-form">
-                <input id="input" type="text" name="name" placeholder="Your Name" required>
-                <input id="input" type="email" name="email" placeholder="Your Email" required>
-                <textarea id="input" cols="30" rows="10" name="message" placeholder="Your Message" required></textarea>
-                <input type="submit" value="Send">
-            </form>
-        </div>
-    </section>
-    <section class="footer">
-      <div class="footer-container">
-          <div class="footer-content">
-              <h2>Follow us</h2>
-              <div class="social-icons">
-                  <a href="#"><i class="ri-facebook-fill"></i></a>
-                  <a href="#"><i class="ri-instagram-fill"></i></a>
-                  <a href="#"><i class="ri-twitter-fill"></i></a>
-                  <a href="#"><i class="ri-linkedin-fill"></i></a>
-              </div>
-          </div>
-          <div class="footer-content">
-              <h2>Company</h2>
-              <ul>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-              </ul>
-          </div>
-          <div class="footer-content">
-              <h2>Support</h2>
-              <ul>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Help desk</a></li>
-                  <li><a href="#">Forums</a></li>
-              </ul>
-          </div>
-          <div class="footer-content">
-              <h2>Creators</h2>
-              <ul>
-                  <li><a href="http://584701.klas4s23.mid-ica.nl" target="_blank">Ingmar van Rheenen</a></li>
-                  <li><a href="https://burakkaya.nl/" target="_blank">Burak Kaya</a></li>
-                  <li><a href="http://581827.klas4s23.mid-ica.nl/" target="_blank">Colin Poort</a></li>
-                  <li><a href="http://585386.klas4s23.mid-ica.nl/" target="_blank">Rouzbeh Sayadifar</a></li>
-                  <li><a href="http://574486.klas4s23.mid-ica.nl/" target="_blank">Fethican Gulcebi</a></li>
-                  <li><a href="http://588742.klas4s23.mid-ica.nl/" target="_blank">Yaido Walters</a></li>
-                  <li><a href="http://586248.klas4s23.mid-ica.nl/" target="_blank">Gijs van de Water</a></li>
-              </ul>
-          </div>
-      </div>
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <h1>Welcome to Dr. Care</h1>
+      <p>Your source for ergonomic computer use</p>
+      <a href="#info" class="btn">View our work</a>
+    </div>
   </section>
   
-    
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
-  </html>
+
+<section id="info" class="info-blocks">
+    <div class="info-block">
+        <h2>Introduction</h2>
+        <p>Brief overview of why ergonomic computer use is important.</p>
+    </div>
+    <div class="info-block">
+        <h2>Sitting Posture</h2>
+        <p>Tips and guidelines for maintaining good posture while using a computer.</p>
+    </div>
+    <div class="info-block">
+        <h2>Adjustable Furniture</h2>
+        <p>Importance of having adjustable desk and chair for ergonomic purposes.</p>
+    </div>
+    <div class="info-block">
+        <h2>Monitor & Keyboard</h2>
+        <p>Correct placement of monitors and keyboards to reduce strain.</p>
+    </div>
+    <div class="info-block">
+        <h2>Breaks & Stretching</h2>
+        <p>Encouragement for users to take regular breaks and perform simple stretches.</p>
+    </div>
+</section>
+
+<section id="risks" class="risks-container">
+  <h2>Risks of Unhealthy Computer Use</h2>
+  <div class="risk-item">
+    <h3><i class="fas fa-exclamation-triangle"></i> Back Pain</h3>
+    <p>Prolonged sitting and poor posture can lead to back pain and discomfort. This can be exacerbated by using chairs without proper lumbar support or desks that are too high or too low.</p>
+    <button class="toggle-prevention">Show Prevention Tips</button>
+    <ul class="prevention-list">
+      <li>Invest in an ergonomic chair with adjustable lumbar support.</li>
+      <li>Ensure your workstation is set up at the correct height to maintain good posture.</li>
+      <li>Take regular breaks to stand up, stretch, and walk around.</li>
+      <li>Practice exercises to strengthen your core muscles.</li>
+    </ul>
+  </div>
+  <div class="risk-item">
+    <h3><i class="fas fa-eye"></i> Eye Strain</h3>
+    <p>Staring at a computer screen for extended periods can cause eye strain and fatigue. This can be due to poor lighting, glare on the screen, or not taking enough breaks to rest your eyes.</p>
+    <button class="toggle-prevention">Show Prevention Tips</button>
+    <ul class="prevention-list">
+      <li>Adjust the brightness and contrast of your screen to reduce eye strain.</li>
+      <li>Use an anti-glare screen or position your monitor to avoid glare.</li>
+      <li>Follow the 20-20-20 rule: every 20 minutes, look at something 20 feet away for 20 seconds.</li>
+      <li>Get regular eye exams to check for vision problems.</li>
+    </ul>
+  </div>
+  <div class="risk-item">
+    <h3><i class="fas fa-hand-pointer"></i> Carpal Tunnel Syndrome</h3>
+    <p>Repetitive typing and mouse usage can contribute to carpal tunnel syndrome. This can be caused by poor wrist positioning, using a keyboard or mouse that is not ergonomically designed, or not taking breaks to rest your hands.</p>
+    <button class="toggle-prevention">Show Prevention Tips</button>
+    <ul class="prevention-list">
+      <li>Use an ergonomic keyboard and mouse to reduce strain on your wrists.</li>
+      <li>Position your keyboard and mouse at the correct height to keep your wrists in a neutral position.</li>
+      <li>Take regular breaks to stretch your hands and wrists.</li>
+      <li>Consider using voice recognition software to reduce typing and mouse usage.</li>
+    </ul>
+  </div>
+</section>
+<section id="testimonials" class="testimonials-container">
+  <div class="testimonial">
+    <div class="testimonial-content">
+      <img src="assets/img/project-1.jpg" alt="Testimonial 1">
+      <div class="testimonial-text">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+        <h3>John Doe</h3>
+      </div>
+    </div>
+  </div>
+  <div class="testimonial">
+    <div class="testimonial-content">
+      <img src="assets/img/project-3.jpg" alt="Testimonial 2">
+      <div class="testimonial-text">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+        <h3>Jane Smith</h3>
+      </div>
+    </div>
+  </div>
+  <div class="testimonial">
+    <div class="testimonial-content">
+      <img src="assets/img/project-2.jpg" alt="Testimonial 3">
+      <div class="testimonial-text">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+        <h3>James Johnson</h3>
+      </div>
+    </div>
+  </div>
+  <div class="testimonial">
+    <div class="testimonial-content">
+      <img src="assets/img/images.jpg" alt="Testimonial 3">
+      <div class="testimonial-text">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+        <h3>James Johnson</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="additional-info" class="info-blocks">
+  <div class="info-block">
+    <h2><i class="fas fa-book"></i> Introduction</h2>
+    <p>Brief overview of why ergonomic computer use is important.</p>
+  </div>
+  <div class="info-block">
+    <h2><i class="fas fa-user-check"></i> Sitting Posture</h2>
+    <p>Tips and guidelines for maintaining good posture while using a computer.</p>
+  </div>
+  <div class="info-block">
+    <h2><i class="fas fa-couch"></i> Adjustable Furniture</h2>
+    <p>Importance of having adjustable desk and chair for ergonomic purposes.</p>
+  </div>
+  <div class="info-block">
+    <h2><i class="fas fa-desktop"></i> Monitor & Keyboard</h2>
+    <p>Correct placement of monitors and keyboards to reduce strain.</p>
+  </div>
+</section>
+<section id="helpful-products" class="helpful-products-container">
+  <h2>Helpful Products</h2>
+  <div class="product-container">
+    <div class="product">
+        <img src="assets/img/project-1.jpg" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>Description of Product 1 and how it helps with computer ergonomics.</p>
+        <a href="#" class="product-link">Learn More</a>
+    </div>
+    <div class="product">
+        <img src="assets/img/project-2.jpg" alt="Product 2">
+        <h3>Product 2</h3>
+        <p>Description of Product 2 and how it helps with eye strain prevention.</p>
+        <a href="#" class="product-link">Learn More</a>
+    </div>
+    <div class="product">
+      <img src="assets/img/project-1.jpg" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>Description of Product 1 and how it helps with computer ergonomics.</p>
+      <a href="#" class="product-link">Learn More</a>
+    </div>
+  </div>
+  <!-- Add more product divs as needed -->
+</section>
+
+<section class="carousel">
+  <div class="carousel-inner">
+    <img src="assets/img/project-1.jpg" class="carousel__image" alt="Image 1">
+    <img src="assets/img/project-2.jpg" class="carousel__image" alt="Image 2">
+    <img src="assets/img/project-3.jpg" class="carousel__image" alt="Image 3">
+    <img src="assets/img/project-1.jpg" class="carousel__image" alt="Image 1">
+    <img src="assets/img/project-2.jpg" class="carousel__image" alt="Image 2">
+    <img src="assets/img/project-3.jpg" class="carousel__image" alt="Image 3">
+    <img src="assets/img/project-1.jpg" class="carousel__image" alt="Image 1">
+    <img src="assets/img/project-2.jpg" class="carousel__image" alt="Image 2">
+    <img src="assets/img/project-3.jpg" class="carousel__image" alt="Image 3">
+  </div>
+</section>
+
+
+
+<section id="videos" class="videos-container">
+  <h2>Videos</h2>
+  <div class="video-content">
+  <div class="video-preview">
+    <div class="video-</div>wrapper"></div>
+    <img src="https://img.youtube.com/vi/video1/maxresdefault.jpg" alt="Video 1 Preview" class="preview-img">
+    <img src="https://img.youtube.com/vi/video2/maxresdefault.jpg" alt="Video 2 Preview" class="preview-img">
+    <img src="https://img.youtube.com/vi/video3/maxresdefault.jpg" alt="Video 3 Preview" class="preview-img">
+    <img src="https://img.youtube.com/vi/video4/maxresdefault.jpg" alt="Video 4 Preview" class="preview-img">
+    <img src="https://img.youtube.com/vi/video5/maxresdefault.jpg" alt="Video 5 Preview" class="preview-img">
+    <img src="https://img.youtube.com/vi/video6/maxresdefault.jpg" alt="Video 6 Preview" class="preview-img">
+    <!-- Add more preview images as needed -->
+  </div>
+
+  <div class="video-gallery">
+    <div class="video active">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nqO6cEbXyKM" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/h_Gi0dnSGcA" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/NBh7So-c3As" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/video4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/video5" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/video6" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+<div class="video-description">
+  <h3 id="video-title">Video Title</h3>
+  <p id="video-duration">Duration: 5:32</p>
+  <p id="video-description">This is the description of the currently selected video. You can add more details here.</p>
+  <button id="watch-video-btn">Watch Video</button>
+</div>
+
+</div>
+
+<div class="video-buttons" style="display: none;">
+    <button class="switch-video active" data-video-index="0">1</button>
+    <button class="switch-video" data-video-index="1">2</button>
+    <button class="switch-video" data-video-index="2">3</button>
+    <button class="switch-video" data-video-index="3">4</button>
+    <button class="switch-video" data-video-index="4">5</button>
+    <button class="switch-video" data-video-index="5">6</button>
+</div>
+
+</section>
+
+<section id="contact" class="contact-container">
+    <div class="contact-information">
+      <h2>Contact Information</h2>
+      <p>Feel free to reach out to us with any questions or concerns.</p>
+      <ul>
+        <li>Email: info@drcare.com</li>
+        <li>Phone: 123-456-7890</li>
+        <li>Address: 123 Ergonomic Way, City, Country</li>
+      </ul>
+    </div>
+
+    <div class="contact-form">
+      <h2>Contact Form</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    <div class="map">
+      <h2>Location</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.073292292073!2d-73.9854286845949!3d40.74881797932747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f4f1b45c3d%3A0x6f8a7e4f3f1e4b1d!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1613663660006!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <!-- Embed Google Map -->
+    </div>
+</section>
+
+
+  <footer>
+    <p>Contact Information | Social Media Links | Disclaimer</p>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
