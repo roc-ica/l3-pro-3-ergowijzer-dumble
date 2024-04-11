@@ -113,12 +113,14 @@
   
   .hero-content h1 {
     font-size: 3em;
-    color: black;
+    color: var(--secend-color);
+    margin-bottom: 0.5em
   }
   
   .hero-content p {
-    font-size: 1.5em;
+    font-size: 2em;
     color: black;
+    margin-bottom: 10px;
   }
   
   .btn {
@@ -226,7 +228,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Ensures the background remains fixed while scrolling */
-    height: 100vh; /* Set a height to enable scrolling */
+    height: 80vh; /* Set a height to enable scrolling */
     position: relative; /* Ensure proper positioning of the content */
   }
   
@@ -569,6 +571,7 @@ li:before {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  width: 100%;
 }
 
 .contact-form button:hover {
@@ -915,7 +918,6 @@ li:before {
     width: 100%;
   
   }
-  
 }
 
 
@@ -930,4 +932,7 @@ li:before {
     justify-content: center;
   
   }  
+  footer p {
+    font-size: 12px; /* Adjust this value to change the font size */
+  }
 }
