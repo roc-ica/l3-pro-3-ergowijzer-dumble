@@ -1,44 +1,97 @@
-
 :root {
-    --primary-color: #007bff; /* Blue color */
-    --secondary-color: #f0f0f0; /* Light gray color */
-    --text-color: #333; /* Dark gray text color */
-    --secend-color: #ff8000; /* Orange color for secondary elements like icons and links */
+  --primary-color: #007bff;
+  /* Blue color */
+  --secondary-color: #f0f0f0;
+  /* Light gray color */
+  --text-color: #333;
+  /* Dark gray text color */
+  --secend-color: #ff8000;
+  /* Orange color for secondary elements like icons and links */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+body,
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+}
+
+nav a {
+  margin: 0 30px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  transition: color 0.3s ease;
+  /* Add transition for smooth color change */
+}
+
+nav a:hover {
+  color: #cbcbcb;
+}
+
+
+/* Define the animation */
+@keyframes underline {
+  from {
+    width: 0;
   }
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    cursor: none;
+
+  to {
+    width: 100%;
   }
-  body, html {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    scroll-behavior: smooth;
-  }
-  
-  header {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  nav {
-    text-align: center;
-  }
-  nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease; /* Add transition for smooth color change */
-  }
-  nav a:hover {
-    color: #cbcbcb;
-  }
+}
+
+/* Apply the animation to the links and button */
+nav a,
+.dropbtn {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Add the underline effect */
+nav a::after,
+.dropbtn::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  /* Adjust as needed */
+  left: 0;
+  width: 0;
+  height: 2px;
+  /* Adjust thickness */
+  background-color: #000;
+  /* Change to your preferred underline color */
+  transition: width 0.3s ease;
+}
+
+/* Trigger the underline animation on hover */
+nav a:hover::after,
+.dropbtn:hover::after {
+  width: 100%;
+}
 
   .dropbtn {
     background-color: var(--primary-color);
@@ -95,11 +148,7 @@
   .show {
     display: block;
   }
-  .wrapper-img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  
   
 
   .hero-section {
@@ -197,31 +246,33 @@
   }
   
 
-  .videos-container {
-    text-align: center;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  footer {
-    display: flex;
-    justify-content: center;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  footer p {
-    margin: 5px 10px; /* Adjust this value to change the space between the <p> elements */
-    color: var(--secondary-color);
-  }
-  footer p a:hover {
-    color: #cbcbcb;
-  }
-  
-  
+.videos-container {
+  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 5px 10px;
+  /* Adjust this value to change the space between the <p> elements */
+  color: var(--secondary-color);
+}
+
+footer p a:hover {
+  color: #cbcbcb;
+}
+
+
 .home__image {
     width: 100%;
     height: 100%;
@@ -248,62 +299,68 @@
 
 
 .risks-container {
-    width: 80%;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #f5f5f5;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
+
 .risks-container h2 {
-    font-size: 28px;
-    margin-bottom: 0px;
-    color: #333;
+  font-size: 28px;
+  margin-bottom: 0px;
+  color: #333;
 }
-.risks-container h3{
-    padding-top: 20px;
+
+.risks-container h3 {
+  padding-top: 20px;
 }
-.risks-container ul li p{
-    font-size: 20px;
-    color: #007bff;
-    position: relative;
+
+.risks-container ul li p {
+  font-size: 20px;
+  color: #007bff;
+  position: relative;
 }
-.risks-container ul{
+
+.risks-container ul {
   margin-top: 20px;
   margin-left: 20px;
 }
+
 h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 li {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 10px;
-    position: relative;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 li:before {
-    content: "•";
-    position: absolute;
-    left: -15px;
-    color: #007bff;
+  content: "•";
+  position: absolute;
+  left: -15px;
+  color: #007bff;
 }
-.video-content{
+
+.video-content {
   display: flex;
 }
 
@@ -311,13 +368,17 @@ li:before {
   background-color: #cbcbcb;
   max-height: 315px;
   display: flex;
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
+  justify-content: center;
+  /* Center items horizontally */
+  align-items: center;
+  /* Center items vertically */
   flex-wrap: wrap;
   margin-bottom: 20px;
   margin-right: 20px;
-  overflow-y: scroll; /* Enable vertical scrolling */
-  height: 315px; /* Set a fixed height */
+  overflow-y: scroll;
+  /* Enable vertical scrolling */
+  height: 315px;
+  /* Set a fixed height */
 
   /* Hide scrollbar for Chrome, Safari and Opera */
   ::-webkit-scrollbar {
@@ -325,15 +386,20 @@ li:before {
   }
 
   /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
+
 .video-preview img {
   background-color: #b3b3b3;
   margin: 5px;
 }
+
 .video-description {
-  width: calc(100% - 640px); /* Adjust width as needed */
+  width: calc(100% - 640px);
+  /* Adjust width as needed */
   padding: 20px;
   background-color: #f9f9f9;
   max-height: 315px;
@@ -426,7 +492,8 @@ li:before {
 }
 
 .product {
-  width: calc(30% - 10px); /* Adjust width as needed */
+  width: calc(30% - 10px);
+  /* Adjust width as needed */
   margin-bottom: 20px;
   box-sizing: border-box;
 }
@@ -462,15 +529,18 @@ li:before {
 .product-link:hover {
   background-color: #0056b3;
 }
+
 /* Carousel */
 .carousel {
   background-color: var(--secondary-color);
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 200px; /* Set the height of the carousel */
+  height: 200px;
+  /* Set the height of the carousel */
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Add a subtle shadow */
 }
 
 .carousel-inner {
@@ -480,11 +550,13 @@ li:before {
 
 .carousel__image {
   width: 100%;
-  height: 185px; /* Ensure images fill the carousel */
+  height: 185px;
+  /* Ensure images fill the carousel */
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
-  transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+  transition: opacity 0.3s ease-in-out;
+  /* Smooth transition for opacity */
   margin: 5px;
 }
 
@@ -500,7 +572,8 @@ li:before {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  z-index: 1; /* Ensure nav arrows appear above images */
+  z-index: 1;
+  /* Ensure nav arrows appear above images */
 }
 
 .carousel-nav button {
@@ -527,7 +600,8 @@ li:before {
 .contact-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Align items at the start of the cross axis */
+  align-items: flex-start;
+  /* Align items at the start of the cross axis */
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px;
@@ -536,20 +610,24 @@ li:before {
 .contact-information,
 .contact-form {
   flex: 1;
-  margin-right: 20px; /* Add margin between the two sections */
+  margin-right: 20px;
+  /* Add margin between the two sections */
 }
 
 .contact-information h2,
 .contact-form h2 {
-  margin-top: 0; /* Remove top margin for consistency */
+  margin-top: 0;
+  /* Remove top margin for consistency */
 }
 
 .contact-information ul {
-  padding-left: 0; /* Remove default padding */
+  padding-left: 0;
+  /* Remove default padding */
 }
 
 .contact-information ul li {
-  list-style: none; /* Remove default list style */
+  list-style: none;
+  /* Remove default list style */
 }
 
 .contact-form label {
@@ -582,12 +660,14 @@ li:before {
 .contact-form button:hover {
   background-color: #0056b3;
 }
+
 .map iframe {
   width: 100%;
   height: 300px;
   border: none;
   border-radius: 5px;
 }
+
 #scrollUpButton {
   position: fixed;
   bottom: 20px;
@@ -598,11 +678,13 @@ li:before {
   background-color: #007bff;
   color: white;
   padding: 10px;
-  border-radius: 0; /* Make it square */
+  border-radius: 0;
+  /* Make it square */
   font-size: 24px;
   opacity: 0;
   transform: translateY(100%);
-  transition: opacity 0.3s, transform 0.3s; /* Smooth transitions for opacity and transform */
+  transition: opacity 0.3s, transform 0.3s;
+  /* Smooth transitions for opacity and transform */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -691,23 +773,33 @@ li:before {
 /* Animation for dynamic shape elements */
 .dynamic-shape {
   position: absolute;
-  pointer-events: none; /* Prevent the element from being interactive */
-  animation: moveShape linear infinite; /* Apply the animation */
+  pointer-events: none;
+  /* Prevent the element from being interactive */
+  animation: moveShape linear infinite;
+  /* Apply the animation */
 }
 
 /* Keyframes for shape movement */
 @keyframes moveShape {
   0% {
-    transform: translateY(-100px) rotate(0deg) scale(0.5); /* Initial position, rotation, and scale */
-    opacity: 0; /* Start with low opacity */
+    transform: translateY(-100px) rotate(0deg) scale(0.5);
+    /* Initial position, rotation, and scale */
+    opacity: 0;
+    /* Start with low opacity */
   }
+
   50% {
-    transform: translateY(calc(50vh + 50px)) rotate(180deg) scale(1); /* Move halfway down, rotate, and scale up */
-    opacity: 1; /* Fade in */
+    transform: translateY(calc(50vh + 50px)) rotate(180deg) scale(1);
+    /* Move halfway down, rotate, and scale up */
+    opacity: 1;
+    /* Fade in */
   }
+
   100% {
-    transform: translateY(calc(100vh + 100px)) rotate(360deg) scale(0.5); /* Move to the bottom, rotate, and scale down */
-    opacity: 0; /* Fade out */
+    transform: translateY(calc(100vh + 100px)) rotate(360deg) scale(0.5);
+    /* Move to the bottom, rotate, and scale down */
+    opacity: 0;
+    /* Fade out */
   }
 }
 
@@ -804,6 +896,7 @@ li:before {
   left: calc(80% + 10vw);
   top: 70%;
 }
+
 /* Circle shape */
 .circle {
   width: 100px;
@@ -851,10 +944,11 @@ li:before {
 
 /* media quary for 1060px minimum */
 @media screen and (max-width: 1060px) {
-  .body{
+  .body {
     width: 100vw;
   }
-  .video-content{
+
+  .video-content {
     display: flex;
     flex-direction: column;
   }
@@ -862,18 +956,22 @@ li:before {
   .video-preview {
     margin-right: 0;
   }
+
   .video-description {
     width: 100%;
     padding: 20px;
     background-color: #f9f9f9;
     max-height: 315px;
   }
+
   .video-description h3 {
     margin-top: 0;
   }
+
   .video-description p {
     margin-bottom: 10px;
   }
+
   #watch-video-btn {
     padding: 10px 20px;
     background-color: #007bff;
@@ -881,9 +979,11 @@ li:before {
     border: none;
     cursor: pointer;
   }
+
   #watch-video-btn:hover {
     background-color: #0056b3;
   }
+
   .preview-img {
     display: block;
     width: 120px;
@@ -893,18 +993,22 @@ li:before {
     margin-bottom: 10px;
     cursor: pointer;
   }
+
   .video-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust the minmax value as needed */
-    grid-gap: 10px; /* Adjust the gap between videos */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Adjust the minmax value as needed */
+    grid-gap: 10px;
+    /* Adjust the gap between videos */
   }
-  
+
   .video {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio for videos */
+    padding-bottom: 56.25%;
+    /* Maintain 16:9 aspect ratio for videos */
   }
-  
+
   .video iframe {
     position: absolute;
     width: 100%;
@@ -913,31 +1017,36 @@ li:before {
     left: 0;
   }
 
-  .info-blocks{
+  .info-blocks {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .info-block{
+
+  .info-block {
     width: 100%;
-  
+
   }
 }
 
 
 @media screen and (max-width: 768px) {
   .video {
-    padding-bottom: 75%; /* Adjust the aspect ratio for smaller screens */
+    padding-bottom: 75%;
+    /* Adjust the aspect ratio for smaller screens */
   }
-  .contact-container{
+
+  .contact-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  
-  }  
+
+  }
+
   footer p {
-    font-size: 12px; /* Adjust this value to change the font size */
+    font-size: 12px;
+    /* Adjust this value to change the font size */
   }
 }
