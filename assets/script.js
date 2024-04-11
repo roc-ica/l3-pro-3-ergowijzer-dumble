@@ -116,9 +116,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 videoDescription.textContent = "Best coach you can hire";
                 break;
             case 3:
-                videoTitle.textContent = "Video 4 Title";
-                videoDuration.textContent = "Duration: 2:30";
-                videoDescription.textContent = "Description of Video 4. Add more details here.";
+                videoTitle.textContent = "Ergonomic chair support";
+                videoDuration.textContent = "Duration: 2:19";
+                videoDescription.textContent = "Experience optimal comfort and support with our ergonomic chair, designed to promote healthy posture and reduce strain on your body during long hours of work.";
                 break;
             case 4:
                 videoTitle.textContent = "Video 5 Title";
