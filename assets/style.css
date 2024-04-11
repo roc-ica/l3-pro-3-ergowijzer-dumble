@@ -172,6 +172,8 @@ nav a:hover::after,
     font-size: 4em;
     font-weight: bold;
     color: var(--secend-color);
+    font-size: 3em;
+    color: var(--primary-color);
     margin-bottom: 0.5em
   }
   
