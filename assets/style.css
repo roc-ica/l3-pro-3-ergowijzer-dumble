@@ -192,6 +192,8 @@
   .videos-container {
     text-align: center;
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
   }
   
   footer {
@@ -722,4 +724,22 @@ li:before {
 .dynamic-shape:nth-child(3) {
   left: 30%;
   top: 70%;
+}
+
+/* media quary for 1060px minimum */
+@media screen and (max-width: 1060px) {
+  .video-content{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .video-preview {
+    margin-right: 0;
+  }
+  .video-description {
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    max-height: 315px;
+  }
 }
