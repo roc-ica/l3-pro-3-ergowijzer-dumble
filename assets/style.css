@@ -95,7 +95,11 @@
   .show {
     display: block;
   }
-  
+  .wrapper-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
 
   .hero-section {
