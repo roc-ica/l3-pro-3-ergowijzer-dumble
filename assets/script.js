@@ -97,49 +97,43 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Function to update video description
-  function updateVideoDescription(index) {
-    switch (index) {
-      case 0:
-        videoTitle.textContent = "Video 1 Title";
-        videoDuration.textContent = "Duration: 1:40";
-        videoDescription.textContent =
-          "very very great video just unbelievable.";
-        break;
-      case 1:
-        videoTitle.textContent = "Dxracer Formula series chair poitch";
-        videoDuration.textContent = "Duration: 4:20";
-        videoDescription.textContent =
-          "In this pitch you will see the dxracer formula series chair. This chair is very comfortable and has a lot of features. It is a great chair for gaming and working.";
-        break;
-      case 2:
-        videoTitle.textContent = "Video 3 Title";
-        videoDuration.textContent = "Duration: 5:10";
-        videoDescription.textContent =
-          "Description of Video 3. Add more details here.";
-        break;
-      case 3:
-        videoTitle.textContent = "Video 4 Title";
-        videoDuration.textContent = "Duration: 2:30";
-        videoDescription.textContent =
-          "Description of Video 4. Add more details here.";
-        break;
-      case 4:
-        videoTitle.textContent = "Video 5 Title";
-        videoDuration.textContent = "Duration: 6:15";
-        videoDescription.textContent =
-          "Description of Video 5. Add more details here.";
-        break;
-      case 5:
-        videoTitle.textContent = "Video 6 Title";
-        videoDuration.textContent = "Duration: 4:55";
-        videoDescription.textContent =
-          "Description of Video 6. Add more details here.";
-        break;
-      default:
-        break;
+    // Function to update video description
+    function updateVideoDescription(index) {
+        switch (index) {
+            case 0:
+                videoTitle.textContent = "Video 1 Title";
+                videoDuration.textContent = "Duration: 1:40";
+                videoDescription.textContent = "very very great video just unbelievable.";
+                break;
+            case 1:
+                videoTitle.textContent = "Dxracer Formula series chair poitch";
+                videoDuration.textContent = "Duration: 4:20";
+                videoDescription.textContent = "In this pitch you will see the dxracer formula series chair. This chair is very comfortable and has a lot of features. It is a great chair for gaming and working.";
+                break;
+            case 2:
+                videoTitle.textContent = "Colin";
+                videoDuration.textContent = "Duration: 1:20";
+                videoDescription.textContent = "Best coach you can hire";
+                break;
+            case 3:
+                videoTitle.textContent = "Video 4 Title";
+                videoDuration.textContent = "Duration: 2:30";
+                videoDescription.textContent = "Description of Video 4. Add more details here.";
+                break;
+            case 4:
+                videoTitle.textContent = "Video 5 Title";
+                videoDuration.textContent = "Duration: 6:15";
+                videoDescription.textContent = "Description of Video 5. Add more details here.";
+                break;
+            case 5:
+                videoTitle.textContent = "Video 6 Title";
+                videoDuration.textContent = "Duration: 4:55";
+                videoDescription.textContent = "Description of Video 6. Add more details here.";
+                break;
+            default:
+                break;
+        }
     }
-  }
 });
 
 //////////////////////////////
