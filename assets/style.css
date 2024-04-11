@@ -412,6 +412,7 @@ li:before {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  text-align: center;
 }
 
 .product-container {
@@ -640,8 +641,8 @@ li:before {
 }
 
 .testimonial img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin-bottom: 20px;
 }
