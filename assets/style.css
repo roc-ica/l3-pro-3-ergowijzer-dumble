@@ -28,7 +28,7 @@ html {
 }
 
 header {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -94,7 +94,7 @@ nav a:hover::after,
 }
 
 .dropbtn {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: black;
   font-size: 30px;
   border: none;
