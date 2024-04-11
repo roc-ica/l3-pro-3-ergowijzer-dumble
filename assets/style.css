@@ -630,7 +630,7 @@ li:before {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: rgba(0, 94, 255, 0.6);
+  background-color: rgba(203, 222, 255, 0.6);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
   animation-duration: 20s;
 }
@@ -640,14 +640,14 @@ li:before {
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 100px solid rgba(0, 136, 255, 0.6);
+  border-bottom: 100px solid rgba(203, 222, 255, 0.6);
   animation-duration: 22s;
 }
 
 .rectangle {
   width: 150px;
   height: 80px;
-  background-color: rgba(0, 123, 255, 0.6);
+  background-color: rgba(203, 222, 255, 0.6);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
   animation-duration: 24s;
 }
