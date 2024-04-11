@@ -169,13 +169,14 @@ nav a:hover::after,
   }
   
   .hero-content h1 {
-    font-size: 3em;
+    font-size: 4em;
+    font-weight: bold;
     color: var(--secend-color);
     margin-bottom: 0.5em
   }
   
   .hero-content p {
-    font-size: 2em;
+    font-size: 2.5em;
     color: black;
     margin-bottom: 10px;
   }
