@@ -658,6 +658,7 @@ li:before {
 /* ////////////////////////////// */
 
 
+/* Container for dynamic background */
 .dynamic-background {
   position: fixed;
   top: 0;
@@ -668,6 +669,7 @@ li:before {
   pointer-events: none;
 }
 
+/* Container for dynamic shapes */
 .dynamic-shapes {
   position: absolute;
   top: 0;
@@ -677,30 +679,40 @@ li:before {
   overflow: hidden;
 }
 
+/* Animation for dynamic shape elements */
 .dynamic-shape {
   position: absolute;
-  pointer-events: none;
-  animation: move 25s linear infinite alternate;
+  pointer-events: none; /* Prevent the element from being interactive */
+  animation: moveShape linear infinite; /* Apply the animation */
 }
 
-@keyframes move {
+/* Keyframes for shape movement */
+@keyframes moveShape {
   0% {
-    transform: translateY(-100px) rotate(0deg);
+    transform: translateY(-100px) rotate(0deg) scale(0.5); /* Initial position, rotation, and scale */
+    opacity: 0; /* Start with low opacity */
+  }
+  50% {
+    transform: translateY(calc(50vh + 50px)) rotate(180deg) scale(1); /* Move halfway down, rotate, and scale up */
+    opacity: 1; /* Fade in */
   }
   100% {
-    transform: translateY(calc(100vh + 100px)) rotate(360deg);
+    transform: translateY(calc(100vh + 100px)) rotate(360deg) scale(0.5); /* Move to the bottom, rotate, and scale down */
+    opacity: 0; /* Fade out */
   }
 }
 
+/* Circle shape */
 .circle {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: rgba(203, 222, 255, 0.6);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
   animation-duration: 20s;
 }
 
+/* Triangle shape */
 .triangle {
   width: 0;
   height: 0;
@@ -710,6 +722,7 @@ li:before {
   animation-duration: 22s;
 }
 
+/* Rectangle shape */
 .rectangle {
   width: 150px;
   height: 80px;
@@ -718,20 +731,114 @@ li:before {
   animation-duration: 24s;
 }
 
-.dynamic-shape:nth-child(1) {
-  left: 10%;
+/* Ellipse shape */
+.ellipse {
+  width: 80px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(203, 222, 255, 0.6);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  animation-duration: 18s;
+}
+
+/* Pentagon shape */
+.pentagon {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(203, 222, 255, 0.6);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  animation-duration: 26s;
+}
+
+/* Star shape */
+.star {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid rgba(203, 222, 255, 0.6);
+  transform: rotate(35deg);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  animation-duration: 28s;
+}
+
+/* Positioning for individual shapes */
+.dynamic-shapes .circle {
+  left: calc(10% + 20vw);
   top: 10%;
 }
 
-.dynamic-shape:nth-child(2) {
-  left: 70%;
+.dynamic-shapes .triangle {
+  left: calc(70% + 10vw);
   top: 30%;
 }
 
-.dynamic-shape:nth-child(3) {
+.dynamic-shapes .rectangle {
   left: 30%;
+  top: calc(70% + 10vh);
+}
+
+.dynamic-shapes .ellipse {
+  left: 50%;
+  top: 20%;
+}
+
+.dynamic-shapes .pentagon {
+  left: calc(40% + 30vw);
+  top: calc(50% + 20vh);
+}
+
+.dynamic-shapes .star {
+  left: calc(80% + 10vw);
   top: 70%;
 }
+/* Circle shape */
+.circle {
+  width: 100px;
+  height: 100px;
+  /* Remaining styles */
+}
+
+/* Triangle shape */
+.triangle {
+  width: 150px;
+  height: 150px;
+  /* Remaining styles */
+}
+
+/* Rectangle shape */
+.rectangle {
+  width: 200px;
+  height: 120px;
+  /* Remaining styles */
+}
+
+/* Ellipse shape */
+.ellipse {
+  width: 120px;
+  height: 80px;
+  /* Remaining styles */
+}
+
+/* Pentagon shape */
+.pentagon {
+  width: 120px;
+  height: 120px;
+  /* Remaining styles */
+}
+
+/* Star shape */
+.star {
+  /* Adjust width and height using border properties */
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid rgba(203, 222, 255, 0.6);
+  /* Remaining styles */
+}
+
 
 /* media quary for 1060px minimum */
 @media screen and (max-width: 1060px) {
