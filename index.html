@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
   <div class="dynamic-background">
     <div class="dynamic-shapes">
@@ -17,17 +19,24 @@
   </div>
   <button id="scrollUpButton" class="hidden"><i class="fas fa-chevron-up"></i></button>
   <header>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#info">Info</a>
-        <a href="#risks">Risks</a>
-        <a href="#additional-info">Additional Info</a>
-        <a href="#helpful-products">Products</a>
-        <a href="#videos">Videos</a>
-        <a href="#carousel">Carousel</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <nav>
+      <a href="#home">Home</a>
+      <div class="dropdown">
+        <button onclick="toggleDropdown()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#info">Info</a>
+          <a href="#risks">Risks</a>
+          <a href="#additional-info">Additional Info</a>
+          <a href="#helpful-products">Products</a>
+          <a href="#videos">Videos</a>
+          <a href="#carousel">Carousel</a>
+        </div>
+      </div> <!-- Close the dropdown div -->
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
+
+
 
   <section id="home" class="hero-section">
     <div class="hero-content">
@@ -36,222 +45,245 @@
       <a href="#info" class="btn">View our work</a>
     </div>
   </section>
-  
 
-<section id="info" class="info-blocks">
-    <div class="info-block">
-        <h2>Introduction</h2>
-        <p>Ergonomic computers are vital for comfort, health, productivity, and safety in the workplace. By promoting proper posture, reducing strain, and minimizing the risk of injuries, ergonomic setups enhance employee well-being and satisfaction, leading to improved performance and a positive work environment.</p>
-    </div>
-    <div class="info-block">
-        <h2>Sitting Posture</h2>
-        <p>Sitting posture is crucial because it affects comfort, health, and productivity. Maintaining proper posture reduces the risk of musculoskeletal issues like back pain and improves blood circulation and breathing. It also enhances focus and energy levels, leading to increased efficiency and overall well-being.</p>
-    </div>
-    <div class="info-block">
-        <h2>Adjustable Furniture</h2>
-        <p>Adjustable furniture is crucial for ergonomic purposes because it allows users to customize their work environment to suit their unique needs and preferences. By enabling adjustments in height, angle, and position, adjustable furniture promotes proper body alignment, reduces strain on muscles and joints, and minimizes the risk of repetitive strain injuries. This adaptability enhances comfort, productivity, and overall well-being in the workplace.</p>
-    </div>
-    <div class="info-block">
-        <h2>Monitor & Keyboard</h2>
-        <p>Correct placement of monitors and keyboards is vital for ergonomics as it minimizes strain on the body, prevents discomfort, and enhances productivity. Proper alignment reduces the risk of musculoskeletal injuries, eye strain, and fatigue, ensuring a healthier and more comfortable work environment.</p>
-    </div>
-    <div class="info-block">
-        <h2>Breaks & Stretching</h2>
-        <p>Breaks and stretching are crucial for overall well-being and productivity. They prevent physical discomfort and mental fatigue, boost productivity, reduce the risk of injuries, and promote better posture and ergonomics. Regular breaks refresh the mind and body, enhancing focus and performance.</p>
-    </div>
-</section>
 
-<section id="risks" class="risks-container">
-  <h2>Risks of Unhealthy Computer Use</h2>
-  <div class="risk-item">
-    <h3><i class="fas fa-exclamation-triangle"></i> Back Pain</h3>
-    <p>Prolonged sitting and poor posture can lead to back pain and discomfort. This can be exacerbated by using chairs without proper lumbar support or desks that are too high or too low.</p>
-    <button class="toggle-prevention">Show Prevention Tips</button>
-    <ul class="prevention-list">
-      <li>Invest in an ergonomic chair with adjustable lumbar support.</li>
-      <li>Ensure your workstation is set up at the correct height to maintain good posture.</li>
-      <li>Take regular breaks to stand up, stretch, and walk around.</li>
-      <li>Practice exercises to strengthen your core muscles.</li>
-    </ul>
-  </div>
-  <div class="risk-item">
-    <h3><i class="fas fa-eye"></i> Eye Strain</h3>
-    <p>Staring at a computer screen for extended periods can cause eye strain and fatigue. This can be due to poor lighting, glare on the screen, or not taking enough breaks to rest your eyes.</p>
-    <button class="toggle-prevention">Show Prevention Tips</button>
-    <ul class="prevention-list">
-      <li>Adjust the brightness and contrast of your screen to reduce eye strain.</li>
-      <li>Use an anti-glare screen or position your monitor to avoid glare.</li>
-      <li>Follow the 20-20-20 rule: every 20 minutes, look at something 20 feet away for 20 seconds.</li>
-      <li>Get regular eye exams to check for vision problems.</li>
-    </ul>
-  </div>
-  <div class="risk-item">
-    <h3><i class="fas fa-hand-pointer"></i> Carpal Tunnel Syndrome</h3>
-    <p>Repetitive typing and mouse usage can contribute to carpal tunnel syndrome. This can be caused by poor wrist positioning, using a keyboard or mouse that is not ergonomically designed, or not taking breaks to rest your hands.</p>
-    <button class="toggle-prevention">Show Prevention Tips</button>
-    <ul class="prevention-list">
-      <li>Use an ergonomic keyboard and mouse to reduce strain on your wrists.</li>
-      <li>Position your keyboard and mouse at the correct height to keep your wrists in a neutral position.</li>
-      <li>Take regular breaks to stretch your hands and wrists.</li>
-      <li>Consider using voice recognition software to reduce typing and mouse usage.</li>
-    </ul>
-  </div>
-</section>
-<section id="testimonials" class="testimonials-container">
-  <div class="testimonial">
-    <div class="testimonial-content">
-      <img src="assets/img/project-1.jpg" alt="Testimonial 1">
-      <div class="testimonial-text">
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-        <h3>John Doe</h3>
+  <section id="info" class="info-blocks">
+    <div class="info-block">
+      <h2>Introduction</h2>
+      <p>Ergonomic computers are vital for comfort, health, productivity, and safety in the workplace. By promoting
+        proper posture, reducing strain, and minimizing the risk of injuries, ergonomic setups enhance employee
+        well-being and satisfaction, leading to improved performance and a positive work environment.</p>
+    </div>
+    <div class="info-block">
+      <h2>Sitting Posture</h2>
+      <p>Sitting posture is crucial because it affects comfort, health, and productivity. Maintaining proper posture
+        reduces the risk of musculoskeletal issues like back pain and improves blood circulation and breathing. It also
+        enhances focus and energy levels, leading to increased efficiency and overall well-being.</p>
+    </div>
+    <div class="info-block">
+      <h2>Adjustable Furniture</h2>
+      <p>Adjustable furniture is crucial for ergonomic purposes because it allows users to customize their work
+        environment to suit their unique needs and preferences. By enabling adjustments in height, angle, and position,
+        adjustable furniture promotes proper body alignment, reduces strain on muscles and joints, and minimizes the
+        risk of repetitive strain injuries. This adaptability enhances comfort, productivity, and overall well-being in
+        the workplace.</p>
+    </div>
+    <div class="info-block">
+      <h2>Monitor & Keyboard</h2>
+      <p>Correct placement of monitors and keyboards is vital for ergonomics as it minimizes strain on the body,
+        prevents discomfort, and enhances productivity. Proper alignment reduces the risk of musculoskeletal injuries,
+        eye strain, and fatigue, ensuring a healthier and more comfortable work environment.</p>
+    </div>
+    <div class="info-block">
+      <h2>Breaks & Stretching</h2>
+      <p>Breaks and stretching are crucial for overall well-being and productivity. They prevent physical discomfort and
+        mental fatigue, boost productivity, reduce the risk of injuries, and promote better posture and ergonomics.
+        Regular breaks refresh the mind and body, enhancing focus and performance.</p>
+    </div>
+  </section>
+
+  <section id="risks" class="risks-container">
+    <h2>Risks of Unhealthy Computer Use</h2>
+    <div class="risk-item">
+      <h3><i class="fas fa-exclamation-triangle"></i> Back Pain</h3>
+      <p>Prolonged sitting and poor posture can lead to back pain and discomfort. This can be exacerbated by using
+        chairs without proper lumbar support or desks that are too high or too low.</p>
+      <button class="toggle-prevention">Show Prevention Tips</button>
+      <ul class="prevention-list">
+        <li>Invest in an ergonomic chair with adjustable lumbar support.</li>
+        <li>Ensure your workstation is set up at the correct height to maintain good posture.</li>
+        <li>Take regular breaks to stand up, stretch, and walk around.</li>
+        <li>Practice exercises to strengthen your core muscles.</li>
+      </ul>
+    </div>
+    <div class="risk-item">
+      <h3><i class="fas fa-eye"></i> Eye Strain</h3>
+      <p>Staring at a computer screen for extended periods can cause eye strain and fatigue. This can be due to poor
+        lighting, glare on the screen, or not taking enough breaks to rest your eyes.</p>
+      <button class="toggle-prevention">Show Prevention Tips</button>
+      <ul class="prevention-list">
+        <li>Adjust the brightness and contrast of your screen to reduce eye strain.</li>
+        <li>Use an anti-glare screen or position your monitor to avoid glare.</li>
+        <li>Follow the 20-20-20 rule: every 20 minutes, look at something 20 feet away for 20 seconds.</li>
+        <li>Get regular eye exams to check for vision problems.</li>
+      </ul>
+    </div>
+    <div class="risk-item">
+      <h3><i class="fas fa-hand-pointer"></i> Carpal Tunnel Syndrome</h3>
+      <p>Repetitive typing and mouse usage can contribute to carpal tunnel syndrome. This can be caused by poor wrist
+        positioning, using a keyboard or mouse that is not ergonomically designed, or not taking breaks to rest your
+        hands.</p>
+      <button class="toggle-prevention">Show Prevention Tips</button>
+      <ul class="prevention-list">
+        <li>Use an ergonomic keyboard and mouse to reduce strain on your wrists.</li>
+        <li>Position your keyboard and mouse at the correct height to keep your wrists in a neutral position.</li>
+        <li>Take regular breaks to stretch your hands and wrists.</li>
+        <li>Consider using voice recognition software to reduce typing and mouse usage.</li>
+      </ul>
+    </div>
+  </section>
+  <section id="testimonials" class="testimonials-container">
+    <div class="testimonial">
+      <div class="testimonial-content">
+        <img src="assets/img/project-1.jpg" alt="Testimonial 1">
+        <div class="testimonial-text">
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+          <h3>John Doe</h3>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="testimonial">
-    <div class="testimonial-content">
-      <img src="assets/img/project-3.jpg" alt="Testimonial 2">
-      <div class="testimonial-text">
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-        <h3>Jane Smith</h3>
+    <div class="testimonial">
+      <div class="testimonial-content">
+        <img src="assets/img/project-3.jpg" alt="Testimonial 2">
+        <div class="testimonial-text">
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+          <h3>Jane Smith</h3>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="testimonial">
-    <div class="testimonial-content">
-      <img src="assets/img/project-2.jpg" alt="Testimonial 3">
-      <div class="testimonial-text">
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-        <h3>James Johnson</h3>
+    <div class="testimonial">
+      <div class="testimonial-content">
+        <img src="assets/img/project-2.jpg" alt="Testimonial 3">
+        <div class="testimonial-text">
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+          <h3>James Johnson</h3>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="testimonial">
-    <div class="testimonial-content">
-      <img src="assets/img/images.jpg" alt="Testimonial 3">
-      <div class="testimonial-text">
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-        <h3>James Johnson</h3>
+    <div class="testimonial">
+      <div class="testimonial-content">
+        <img src="assets/img/images.jpg" alt="Testimonial 3">
+        <div class="testimonial-text">
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+          <h3>James Johnson</h3>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
-<section id="additional-info" class="info-blocks">
-  <div class="info-block">
-    <h2><i class="fas fa-book"></i> Introduction</h2>
-    <p>Brief overview of why ergonomic computer use is important.</p>
-  </div>
-  <div class="info-block">
-    <h2><i class="fas fa-user-check"></i> Sitting Posture</h2>
-    <p>Tips and guidelines for maintaining good posture while using a computer.</p>
-  </div>
-  <div class="info-block">
-    <h2><i class="fas fa-couch"></i> Adjustable Furniture</h2>
-    <p>Importance of having adjustable desk and chair for ergonomic purposes.</p>
-  </div>
-  <div class="info-block">
-    <h2><i class="fas fa-desktop"></i> Monitor & Keyboard</h2>
-    <p>Correct placement of monitors and keyboards to reduce strain.</p>
-  </div>
-</section>
-<section id="helpful-products" class="helpful-products-container">
-  <h2>Helpful Products</h2>
-  <div class="product-container">
-    <div class="product">
+  <section id="additional-info" class="info-blocks">
+    <div class="info-block">
+      <h2><i class="fas fa-book"></i> Introduction</h2>
+      <p>Brief overview of why ergonomic computer use is important.</p>
+    </div>
+    <div class="info-block">
+      <h2><i class="fas fa-user-check"></i> Sitting Posture</h2>
+      <p>Tips and guidelines for maintaining good posture while using a computer.</p>
+    </div>
+    <div class="info-block">
+      <h2><i class="fas fa-couch"></i> Adjustable Furniture</h2>
+      <p>Importance of having adjustable desk and chair for ergonomic purposes.</p>
+    </div>
+    <div class="info-block">
+      <h2><i class="fas fa-desktop"></i> Monitor & Keyboard</h2>
+      <p>Correct placement of monitors and keyboards to reduce strain.</p>
+    </div>
+  </section>
+  <section id="helpful-products" class="helpful-products-container">
+    <h2>Helpful Products</h2>
+    <div class="product-container">
+      <div class="product">
         <img src="assets/img/project-1.jpg" alt="Product 1">
         <h3>Product 1</h3>
         <p>Description of Product 1 and how it helps with computer ergonomics.</p>
         <a href="#" class="product-link">Learn More</a>
-    </div>
-    <div class="product">
+      </div>
+      <div class="product">
         <img src="assets/img/project-2.jpg" alt="Product 2">
         <h3>Product 2</h3>
         <p>Description of Product 2 and how it helps with eye strain prevention.</p>
         <a href="#" class="product-link">Learn More</a>
+      </div>
+      <div class="product">
+        <img src="assets/img/project-1.jpg" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>Description of Product 1 and how it helps with computer ergonomics.</p>
+        <a href="#" class="product-link">Learn More</a>
+      </div>
     </div>
-    <div class="product">
-      <img src="assets/img/project-1.jpg" alt="Product 1">
-      <h3>Product 1</h3>
-      <p>Description of Product 1 and how it helps with computer ergonomics.</p>
-      <a href="#" class="product-link">Learn More</a>
-    </div>
-  </div>
-  <!-- Add more product divs as needed -->
-</section>
-<section id="videos" class="videos-container">
-  <h2>Videos</h2>
-  <div class="video-content">
-  <div class="video-preview">
-    <div class="video-wrapper"></div>
-    <img src="assets/img/Video-Graphics.png" alt="Video 1 Preview" class="preview-img">
-    <img src="assets/img/Video-Graphics.png" alt="Video 2 Preview" class="preview-img">
-    <img src="assets/img/Video-Graphics.png" alt="Video 3 Preview" class="preview-img">
-    <img src="assets/img/Video-Graphics.png" alt="Video 4 Preview" class="preview-img">
-    <img src="assets/img/Video-Graphics.png" alt="Video 5 Preview" class="preview-img">
-    <img src="assets/img/Video-Graphics.png" alt="Video 6 Preview" class="preview-img">
-    <!-- Add more preview images as needed -->
-  </div>
+    <!-- Add more product divs as needed -->
+  </section>
+  <section id="videos" class="videos-container">
+    <h2>Videos</h2>
+    <div class="video-content">
+      <div class="video-preview">
+        <div class="video-wrapper"></div>
+        <img src="assets/img/Video-Graphics.png" alt="Video 1 Preview" class="preview-img">
+        <img src="assets/img/Video-Graphics.png" alt="Video 2 Preview" class="preview-img">
+        <img src="assets/img/Video-Graphics.png" alt="Video 3 Preview" class="preview-img">
+        <img src="assets/img/Video-Graphics.png" alt="Video 4 Preview" class="preview-img">
+        <img src="assets/img/Video-Graphics.png" alt="Video 5 Preview" class="preview-img">
+        <img src="assets/img/Video-Graphics.png" alt="Video 6 Preview" class="preview-img">
+        <!-- Add more preview images as needed -->
+      </div>
 
-  <div class="video-gallery">
-    <div class="video active">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/0uxPAE6IWvs" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/g6OSd3KyY7Y" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/3eFshRHmpo0" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/TM4pyGZJPmw" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/video5" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/video6" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div>
-<div class="video-description">
-  <h3 id="video-title">Video Title</h3>
-  <p id="video-duration">Duration: 5:32</p>
-  <p id="video-description">This is the description of the currently selected video. You can add more details here.</p>
-  <button id="watch-video-btn">Watch Video</button>
-</div>
+      <div class="video-gallery">
+        <div class="video active">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/0uxPAE6IWvs" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/g6OSd3KyY7Y" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/3eFshRHmpo0" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/TM4pyGZJPmw" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/video5" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/video6" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="video-description">
+        <h3 id="video-title">Video Title</h3>
+        <p id="video-duration">Duration: 5:32</p>
+        <p id="video-description">This is the description of the currently selected video. You can add more details
+          here.</p>
+        <button id="watch-video-btn">Watch Video</button>
+      </div>
 
-</div>
+    </div>
 
-<div class="video-buttons" style="display: none;">
-    <button class="switch-video active" data-video-index="0">1</button>
-    <button class="switch-video" data-video-index="1">2</button>
-    <button class="switch-video" data-video-index="2">3</button>
-    <button class="switch-video" data-video-index="3">4</button>
-    <button class="switch-video" data-video-index="4">5</button>
-    <button class="switch-video" data-video-index="5">6</button>
-</div>
+    <div class="video-buttons" style="display: none;">
+      <button class="switch-video active" data-video-index="0">1</button>
+      <button class="switch-video" data-video-index="1">2</button>
+      <button class="switch-video" data-video-index="2">3</button>
+      <button class="switch-video" data-video-index="3">4</button>
+      <button class="switch-video" data-video-index="4">5</button>
+      <button class="switch-video" data-video-index="5">6</button>
+    </div>
 
-</section>
+  </section>
 
-<section id="carousel" class="carousel">
-  <div class="carousel-inner"></div>
-  <div class="carousel-inner">
-    <img src="assets/img/project-1.jpg" class="carousel__image" alt="Image 1">
-    <img src="assets/img/project-2.jpg" class="carousel__image" alt="Image 2">
-    <img src="assets/img/project-3.jpg" class="carousel__image" alt="Image 3">
-    <img src="assets/img/project-1.jpg" class="carousel__image" alt="Image 1">
-    <img src="assets/img/project-2.jpg" class="carousel__image" alt="Image 2">
-    <img src="assets/img/project-3.jpg" class="carousel__image" alt="Image 3">
-    <img src="assets/img/project-1.jpg" class="carousel__image" alt="Image 1">
-    <img src="assets/img/project-2.jpg" class="carousel__image" alt="Image 2">
-    <img src="assets/img/project-3.jpg" class="carousel__image" alt="Image 3">
-  </div>
-</section>
+  <section id="carousel" class="carousel">
+    <div class="carousel-inner"></div>
+    <div class="carousel-inner">
+      <img src="assets/img/project-1.jpg" class="carousel__image" alt="Image 1">
+      <img src="assets/img/project-2.jpg" class="carousel__image" alt="Image 2">
+      <img src="assets/img/project-3.jpg" class="carousel__image" alt="Image 3">
+      <img src="assets/img/project-1.jpg" class="carousel__image" alt="Image 1">
+      <img src="assets/img/project-2.jpg" class="carousel__image" alt="Image 2">
+      <img src="assets/img/project-3.jpg" class="carousel__image" alt="Image 3">
+      <img src="assets/img/project-1.jpg" class="carousel__image" alt="Image 1">
+      <img src="assets/img/project-2.jpg" class="carousel__image" alt="Image 2">
+      <img src="assets/img/project-3.jpg" class="carousel__image" alt="Image 3">
+    </div>
+  </section>
 
-</section>
+  </section>
 
-<section id="contact" class="contact-container">
+  <section id="contact" class="contact-container">
     <div class="contact-information">
       <h2>Contact Information</h2>
       <p>Feel free to reach out to us with any questions or concerns.</p>
@@ -279,9 +311,11 @@
     </div>
     <div class="map">
       <h2>Location</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.073292292073!2d-73.9854286845949!3d40.74881797932747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f4f1b45c3d%3A0x6f8a7e4f3f1e4b1d!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1613663660006!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.073292292073!2d-73.9854286845949!3d40.74881797932747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f4f1b45c3d%3A0x6f8a7e4f3f1e4b1d!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1613663660006!5m2!1sen!2sus"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
-</section>
+  </section>
 
 
   <footer>
@@ -290,4 +324,5 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="assets/script.js"></script>
 </body>
+
 </html>
