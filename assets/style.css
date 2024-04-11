@@ -46,11 +46,11 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
+    transition: color 0.3s ease; /* Add transition for smooth color change */
   }
   
-  .dropbtn:hover,
-  .dropbtn:focus {
-    background-color: #2980B9;
+  .dropbtn:hover {
+    color: #cbcbcb;
   }
   
   .dropdown {
@@ -197,6 +197,8 @@
   }
   
   footer {
+    display: flex;
+    justify-content: center;
     background-color: var(--primary-color);
     color: #fff;
     padding: 20px 0;
@@ -204,7 +206,11 @@
   }
   
   footer p {
-    margin: 5px;
+    margin: 5px 10px; /* Adjust this value to change the space between the <p> elements */
+    color: var(--secondary-color);
+  }
+  footer p a:hover {
+    color: #cbcbcb;
   }
   
   
@@ -728,6 +734,9 @@ li:before {
 
 /* media quary for 1060px minimum */
 @media screen and (max-width: 1060px) {
+  .body{
+    width: 100vw;
+  }
   .video-content{
     display: flex;
     flex-direction: column;
@@ -742,4 +751,74 @@ li:before {
     background-color: #f9f9f9;
     max-height: 315px;
   }
+  .video-description h3 {
+    margin-top: 0;
+  }
+  .video-description p {
+    margin-bottom: 10px;
+  }
+  #watch-video-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  #watch-video-btn:hover {
+    background-color: #0056b3;
+  }
+  .preview-img {
+    display: block;
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust the minmax value as needed */
+    grid-gap: 10px; /* Adjust the gap between videos */
+  }
+  
+  .video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio for videos */
+  }
+  
+  .video iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .info-blocks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .info-block{
+    width: 100%;
+  
+  }
+  
+}
+
+
+@media screen and (max-width: 768px) {
+  .video {
+    padding-bottom: 75%; /* Adjust the aspect ratio for smaller screens */
+  }
+  .contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+  }  
 }
