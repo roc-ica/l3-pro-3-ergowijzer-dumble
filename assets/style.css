@@ -915,7 +915,6 @@ li:before {
     width: 100%;
   
   }
-  
 }
 
 
@@ -930,4 +929,7 @@ li:before {
     justify-content: center;
   
   }  
+  footer p {
+    font-size: 12px; /* Adjust this value to change the font size */
+  }
 }

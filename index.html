@@ -335,7 +335,10 @@
 
   <footer>
     <p class="magic-hover magic-hover__square">Contact Information</p>
+    <p>|</p>
     <p class="magic-hover magic-hover__square">Social Media Links</p>
+    <p>|</p>
+
     <p class="magic-hover magic-hover__square">Disclaimer</p>
   </footer>
 
@@ -343,16 +346,17 @@
   <script src="assets/script.js"></script>
   <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
   <script>
-    options = {
-  "outerStyle": "disable",
-  "hoverEffect": "pointer-blur",
-  "hoverItemMove": false,
-  "defaultCursor": false,
-  "outerWidth": 30,
-  "outerHeight": 30
-}
-magicMouse(options);
-            
+    if (window.innerWidth > 768) {
+      options = {
+        "outerStyle": "disable",
+        "hoverEffect": "pointer-blur",
+        "hoverItemMove": false,
+        "defaultCursor": false,
+        "outerWidth": 30,
+        "outerHeight": 30
+      }
+      magicMouse(options);
+    }
   </script>
 </body>
 
