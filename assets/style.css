@@ -113,11 +113,12 @@
   
   .hero-content h1 {
     font-size: 3em;
+    color: black;
   }
   
   .hero-content p {
     font-size: 1.5em;
-    color: white;
+    color: black;
   }
   
   .btn {
@@ -221,7 +222,7 @@
     z-index: -99999;
   }
   .hero-section {
-    background-image: url('img/project-1.jpg'); /* Adjust the path to your background image */
+    background-image: url('img/background.jpg'); /* Adjust the path to your background image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Ensures the background remains fixed while scrolling */
