@@ -110,9 +110,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 videoDescription.textContent = "very very great video just unbelievable.";
                 break;
             case 1:
-                videoTitle.textContent = "Video 2 Title";
+                videoTitle.textContent = "Dxracer Formula series chair poitch";
                 videoDuration.textContent = "Duration: 4:20";
-                videoDescription.textContent = "Description of Video 2. Add more details here.";
+                videoDescription.textContent = "In this pitch you will see the dxracer formula series chair. This chair is very comfortable and has a lot of features. It is a great chair for gaming and working.";
                 break;
             case 2:
                 videoTitle.textContent = "Video 3 Title";
