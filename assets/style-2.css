@@ -44,6 +44,65 @@ h2 {
     margin-bottom: 10px;
 }
 
+nav {
+  text-align: center;
+}
+
+nav a {
+  margin: 0 30px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  transition: color 0.3s ease;
+  /* Add transition for smooth color change */
+}
+
+nav a:hover {
+  color: #cbcbcb;
+}
+
+
+/* Define the animation */
+@keyframes underline {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* Apply the animation to the links and button */
+nav a,
+.dropbtn {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Add the underline effect */
+nav a::after,
+.dropbtn::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  /* Adjust as needed */
+  left: 0;
+  width: 0;
+  height: 2px;
+  /* Adjust thickness */
+  background-color: #000;
+  /* Change to your preferred underline color */
+  transition: width 0.3s ease;
+}
+
+/* Trigger the underline animation on hover */
+nav a:hover::after,
+.dropbtn:hover::after {
+  width: 100%;
+}
+
 ul {
     list-style-type: disc;
     margin-left: 20px;
