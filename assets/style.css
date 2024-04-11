@@ -169,10 +169,9 @@ nav a:hover::after,
   }
   
   .hero-content h1 {
-    font-size: 4em;
+    font-size: 5em;
     font-weight: bold;
     color: var(--secend-color);
-    font-size: 3em;
     color: var(--primary-color);
     margin-bottom: 0.5em
   }
