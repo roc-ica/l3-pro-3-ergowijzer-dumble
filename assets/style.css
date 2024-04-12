@@ -35,14 +35,14 @@ header {
 }
 
 nav {
-  text-align: center;
+  text-align: left;
 }
 
 nav a {
   margin: 0 30px;
   text-decoration: none;
   color: #fff;
-  font-size: 30px;
+  font-size: 25px;
   transition: color 0.3s ease;
   /* Add transition for smooth color change */
 }
@@ -96,7 +96,7 @@ nav a:hover::after,
 .dropbtn {
   background-color: var(--secondary-color);
   color: black;
-  font-size: 30px;
+  font-size: 25px;
   border: none;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -173,7 +173,6 @@ nav a:hover::after,
     font-weight: bold;
     color: var(--secend-color);
     color: var(--primary-color);
-    margin-bottom: 0.5em
   }
   
   .hero-content p {
