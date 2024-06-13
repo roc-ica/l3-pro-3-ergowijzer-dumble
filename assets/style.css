@@ -1,0 +1,1058 @@
+:root {
+  --primary-color: #007bff;
+  /* Blue color */
+  --secondary-color: #f0f0f0;
+  /* Light gray color */
+  --text-color: #333;
+  /* Dark gray text color */
+  --secend-color: #ff8000;
+  /* Orange color for secondary elements like icons and links */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+body,
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  text-align: left;
+}
+
+nav a {
+  margin: 0 30px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  transition: color 0.3s ease;
+  /* Add transition for smooth color change */
+}
+
+nav a:hover {
+  color: #cbcbcb;
+}
+
+
+/* Define the animation */
+@keyframes underline {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* Apply the animation to the links and button */
+nav a,
+.dropbtn {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Add the underline effect */
+nav a::after,
+.dropbtn::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  /* Adjust as needed */
+  left: 0;
+  width: 0;
+  height: 2px;
+  /* Adjust thickness */
+  background-color: #000;
+  /* Change to your preferred underline color */
+  transition: width 0.3s ease;
+}
+
+/* Trigger the underline animation on hover */
+nav a:hover::after,
+.dropbtn:hover::after {
+  width: 100%;
+}
+
+.dropbtn {
+  background-color: var(--secondary-color);
+  color: black;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  /* Add transition for smooth color change */
+}
+
+.dropbtn:hover {
+  color: #cbcbcb;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 4;
+  animation: fadeIn 0.5s forwards;
+  /* Apply animation to fade in */
+}
+
+.dropdown-content a {
+  color: black;
+  padding-top: 2.5%;
+  padding-bottom: 3.5%;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  /* background-color: #ddd; */
+  color: #000;
+}
+
+/* Keyframes animation for fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Show the dropdown content */
+.show {
+  display: block;
+}
+
+
+
+  .hero-section {
+    position: relative;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 20px; /* Adjust as needed */
+    transform: translateY(-50%);
+  }
+  
+  .hero-content h1 {
+    font-size: 5em;
+    font-weight: bold;
+    color: var(--secend-color);
+    color: var(--primary-color);
+  }
+  
+  .hero-content p {
+    font-size: 2.5em;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: var(--secend-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #d66b00; /* Darker shade of primary color */
+  }
+  
+  .image-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .prevention-list {
+    display: none; /* Hide the prevention tips by default */
+  }
+  .risk-item h3 {
+    color: var(--primary-color);
+  }
+  .toggle-prevention {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px ;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+  .toggle-prevention:hover {
+    background-color: #0056b3;
+  }
+  
+  .info-blocks {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+  
+  .info-block {
+    width: 30%;
+    background-color: transparent;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .info-block h2 {
+    color: var(--primary-color);
+  }
+  
+  .risks-section {
+    background-color: var(--secondary-color);
+    padding: 50px 0;
+  }
+  
+
+.videos-container {
+  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 5px 10px;
+  /* Adjust this value to change the space between the <p> elements */
+  color: var(--secondary-color);
+}
+
+footer p a:hover {
+  color: #cbcbcb;
+}
+
+
+.home__image {
+    width: 100%;
+    height: 100%;
+    z-index: -99999;
+  }
+  .hero-section {
+    background-image: url('img/background.jpg'); /* Adjust the path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures the background remains fixed while scrolling */
+    height: 80vh; /* Set a height to enable scrolling */
+    position: relative; /* Ensure proper positioning of the content */
+  }
+  
+  .hero-content {
+    position: absolute; /* Position content relative to its container */
+    top: 50%; /* Move content vertically to center */
+    left: 20px; /* Adjust as needed */
+    transform: translateY(-50%); /* Center content vertically */
+    text-align: left; /* Align text to the left */
+    color: white; /* Text color */
+  }
+  
+
+
+.risks-container {
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.risks-container h2 {
+  font-size: 28px;
+  margin-bottom: 0px;
+  color: #333;
+}
+
+.risks-container h3 {
+  padding-top: 20px;
+}
+
+.risks-container ul li p {
+  font-size: 20px;
+  color: #007bff;
+  position: relative;
+}
+
+.risks-container ul {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+li:before {
+  content: "•";
+  position: absolute;
+  left: -15px;
+  color: #007bff;
+}
+
+.video-content {
+  display: flex;
+}
+
+.video-preview {
+  background-color: #cbcbcb;
+  max-height: 315px;
+  display: flex;
+  justify-content: center;
+  /* Center items horizontally */
+  align-items: center;
+  /* Center items vertically */
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  overflow-y: scroll;
+  /* Enable vertical scrolling */
+  height: 315px;
+  /* Set a fixed height */
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.video-preview img {
+  background-color: #b3b3b3;
+  margin: 5px;
+}
+
+.video-description {
+  width: calc(100% - 640px);
+  /* Adjust width as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  max-height: 315px;
+}
+
+.video-description h3 {
+  margin-top: 0;
+}
+
+.video-description p {
+  margin-bottom: 10px;
+}
+
+#watch-video-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#watch-video-btn:hover {
+  background-color: #0056b3;
+}
+
+.preview-img {
+  display: block;
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border: 4px solid;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+}
+
+.preview-img.active {
+  border-color: #007bff;
+}
+
+.videos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.video-gallery {
+  margin-bottom: 20px;
+}
+
+.video {
+  display: none;
+}
+
+.video.active {
+  display: block;
+}
+
+.switch-video {
+  padding: 8px 16px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.switch-video.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.switch-video:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+
+.helpful-products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.product {
+  width: calc(30% - 10px);
+  /* Adjust width as needed */
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.product p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--secend-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.product-link:hover {
+  background-color: #0056b3;
+}
+
+/* Carousel */
+.carousel {
+  background-color: var(--secondary-color);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+  /* Set the height of the carousel */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Add a subtle shadow */
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel__image {
+  width: 100%;
+  height: 185px;
+  /* Ensure images fill the carousel */
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+  /* Smooth transition for opacity */
+  margin: 5px;
+}
+
+.carousel__image:hover {
+  opacity: 0.7;
+}
+
+/* Navigation Arrows */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  /* Ensure nav arrows appear above images */
+}
+
+.carousel-nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  outline: none;
+}
+
+.carousel-prev {
+  margin-left: 10px;
+}
+
+.carousel-next {
+  margin-right: 10px;
+}
+
+/* ========================= */
+/*           contact         */
+/* ========================= */
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* Align items at the start of the cross axis */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.contact-information,
+.contact-form {
+  flex: 1;
+  margin-right: 20px;
+  /* Add margin between the two sections */
+}
+
+.contact-information h2,
+.contact-form h2 {
+  margin-top: 0;
+  /* Remove top margin for consistency */
+}
+
+.contact-information ul {
+  padding-left: 0;
+  /* Remove default padding */
+}
+
+.contact-information ul li {
+  list-style: none;
+  /* Remove default list style */
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 5px;
+}
+
+#scrollUpButton {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 0;
+  /* Make it square */
+  font-size: 24px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s, transform 0.3s;
+  /* Smooth transitions for opacity and transform */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+#scrollUpButton:hover {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Font Awesome CDN Link */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+/* ========================= */
+/*           quize           */
+/* ========================= */
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.testimonial {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.testimonial-text p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonial-text h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+/* //////////////////////////////// */
+/*      dinamic background         */
+/* ////////////////////////////// */
+
+
+/* Container for dynamic background */
+.dynamic-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Container for dynamic shapes */
+.dynamic-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Animation for dynamic shape elements */
+.dynamic-shape {
+  position: absolute;
+  pointer-events: none;
+  /* Prevent the element from being interactive */
+  animation: moveShape linear infinite;
+  /* Apply the animation */
+}
+
+/* Keyframes for shape movement */
+@keyframes moveShape {
+  0% {
+    transform: translateY(-100px) rotate(0deg) scale(0.5);
+    /* Initial position, rotation, and scale */
+    opacity: 0;
+    /* Start with low opacity */
+  }
+
+  50% {
+    transform: translateY(calc(50vh + 50px)) rotate(180deg) scale(1);
+    /* Move halfway down, rotate, and scale up */
+    opacity: 1;
+    /* Fade in */
+  }
+
+  100% {
+    transform: translateY(calc(100vh + 100px)) rotate(360deg) scale(0.5);
+    /* Move to the bottom, rotate, and scale down */
+    opacity: 0;
+    /* Fade out */
+  }
+}
+
+/* Circle shape */
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(203, 222, 255, 0.6);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  animation-duration: 20s;
+}
+
+/* Triangle shape */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid rgba(203, 222, 255, 0.6);
+  animation-duration: 22s;
+}
+
+/* Rectangle shape */
+.rectangle {
+  width: 150px;
+  height: 80px;
+  background-color: rgba(203, 222, 255, 0.6);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  animation-duration: 24s;
+}
+
+/* Ellipse shape */
+.ellipse {
+  width: 80px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(203, 222, 255, 0.6);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  animation-duration: 18s;
+}
+
+/* Pentagon shape */
+.pentagon {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(203, 222, 255, 0.6);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  animation-duration: 26s;
+}
+
+/* Star shape */
+.star {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid rgba(203, 222, 255, 0.6);
+  transform: rotate(35deg);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  animation-duration: 28s;
+}
+
+/* Positioning for individual shapes */
+.dynamic-shapes .circle {
+  left: calc(10% + 20vw);
+  top: 10%;
+}
+
+.dynamic-shapes .triangle {
+  left: calc(70% + 10vw);
+  top: 30%;
+}
+
+.dynamic-shapes .rectangle {
+  left: 30%;
+  top: calc(70% + 10vh);
+}
+
+.dynamic-shapes .ellipse {
+  left: 50%;
+  top: 20%;
+}
+
+.dynamic-shapes .pentagon {
+  left: calc(40% + 30vw);
+  top: calc(50% + 20vh);
+}
+
+.dynamic-shapes .star {
+  left: calc(80% + 10vw);
+  top: 70%;
+}
+
+/* Circle shape */
+.circle {
+  width: 100px;
+  height: 100px;
+  /* Remaining styles */
+}
+
+/* Triangle shape */
+.triangle {
+  width: 150px;
+  height: 150px;
+  /* Remaining styles */
+}
+
+/* Rectangle shape */
+.rectangle {
+  width: 200px;
+  height: 120px;
+  /* Remaining styles */
+}
+
+/* Ellipse shape */
+.ellipse {
+  width: 120px;
+  height: 80px;
+  /* Remaining styles */
+}
+
+/* Pentagon shape */
+.pentagon {
+  width: 120px;
+  height: 120px;
+  /* Remaining styles */
+}
+
+/* Star shape */
+.star {
+  /* Adjust width and height using border properties */
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid rgba(203, 222, 255, 0.6);
+  /* Remaining styles */
+}
+
+
+/* media quary for 1060px minimum */
+@media screen and (max-width: 1060px) {
+  .body {
+    width: 100vw;
+  }
+
+  .video-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .video-preview {
+    margin-right: 0;
+  }
+
+  .video-description {
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    max-height: 315px;
+  }
+
+  .video-description h3 {
+    margin-top: 0;
+  }
+
+  .video-description p {
+    margin-bottom: 10px;
+  }
+
+  #watch-video-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  #watch-video-btn:hover {
+    background-color: #0056b3;
+  }
+
+  .preview-img {
+    display: block;
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Adjust the minmax value as needed */
+    grid-gap: 10px;
+    /* Adjust the gap between videos */
+  }
+
+  .video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* Maintain 16:9 aspect ratio for videos */
+  }
+
+  .video iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .info-blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-block {
+    width: 100%;
+
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .video {
+    padding-bottom: 75%;
+    /* Adjust the aspect ratio for smaller screens */
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  footer p {
+    font-size: 12px;
+    /* Adjust this value to change the font size */
+  }
+}

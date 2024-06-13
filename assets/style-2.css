@@ -1,0 +1,403 @@
+:root {
+    --primary-color: #007bff; /* Blue color */
+    --secondary-color: #f0f0f0; /* Light gray color */
+    --text-color: #333; /* Dark gray text color */
+    --secend-color: #ff8000; /* Orange color for secondary elements like icons and links */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Add this line */
+    grid-gap: 20px; /* Add this line to add some space between the columns */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+section {
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+nav {
+  text-align: center;
+}
+
+nav a {
+  margin: 0 30px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  transition: color 0.3s ease;
+  /* Add transition for smooth color change */
+}
+
+nav a:hover {
+  color: #cbcbcb;
+}
+
+
+/* Define the animation */
+@keyframes underline {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* Apply the animation to the links and button */
+nav a,
+.dropbtn {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Add the underline effect */
+nav a::after,
+.dropbtn::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  /* Adjust as needed */
+  left: 0;
+  width: 0;
+  height: 2px;
+  /* Adjust thickness */
+  background-color: #000;
+  /* Change to your preferred underline color */
+  transition: width 0.3s ease;
+}
+
+/* Trigger the underline animation on hover */
+nav a:hover::after,
+.dropbtn:hover::after {
+  width: 100%;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+/* //////////////////////////////// */
+/*      dinamic background         */
+/* ////////////////////////////// */
+
+
+/* Container for dynamic background */
+.dynamic-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  /* Container for dynamic shapes */
+  .dynamic-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  /* Animation for dynamic shape elements */
+  .dynamic-shape {
+    position: absolute;
+    pointer-events: none; /* Prevent the element from being interactive */
+    animation: moveShape linear infinite; /* Apply the animation */
+  }
+  
+  /* Keyframes for shape movement */
+  @keyframes moveShape {
+    0% {
+      transform: translateY(-100px) rotate(0deg) scale(0.5); /* Initial position, rotation, and scale */
+      opacity: 0; /* Start with low opacity */
+    }
+    50% {
+      transform: translateY(calc(50vh + 50px)) rotate(180deg) scale(1); /* Move halfway down, rotate, and scale up */
+      opacity: 1; /* Fade in */
+    }
+    100% {
+      transform: translateY(calc(100vh + 100px)) rotate(360deg) scale(0.5); /* Move to the bottom, rotate, and scale down */
+      opacity: 0; /* Fade out */
+    }
+  }
+  
+  /* Circle shape */
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(203, 222, 255, 0.6);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    animation-duration: 20s;
+  }
+  
+  /* Triangle shape */
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid rgba(203, 222, 255, 0.6);
+    animation-duration: 22s;
+  }
+  
+  /* Rectangle shape */
+  .rectangle {
+    width: 150px;
+    height: 80px;
+    background-color: rgba(203, 222, 255, 0.6);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    animation-duration: 24s;
+  }
+  
+  /* Ellipse shape */
+  .ellipse {
+    width: 80px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(203, 222, 255, 0.6);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    animation-duration: 18s;
+  }
+  
+  /* Pentagon shape */
+  .pentagon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(203, 222, 255, 0.6);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    animation-duration: 26s;
+  }
+  
+  /* Star shape */
+  .star {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid rgba(203, 222, 255, 0.6);
+    transform: rotate(35deg);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    animation-duration: 28s;
+  }
+  
+  /* Positioning for individual shapes */
+  .dynamic-shapes .circle {
+    left: calc(10% + 20vw);
+    top: 10%;
+  }
+  
+  .dynamic-shapes .triangle {
+    left: calc(70% + 10vw);
+    top: 30%;
+  }
+  
+  .dynamic-shapes .rectangle {
+    left: 30%;
+    top: calc(70% + 10vh);
+  }
+  
+  .dynamic-shapes .ellipse {
+    left: 50%;
+    top: 20%;
+  }
+  
+  .dynamic-shapes .pentagon {
+    left: calc(40% + 30vw);
+    top: calc(50% + 20vh);
+  }
+  
+  .dynamic-shapes .star {
+    left: calc(80% + 10vw);
+    top: 70%;
+  }
+  /* Circle shape */
+  .circle {
+    width: 100px;
+    height: 100px;
+    /* Remaining styles */
+  }
+  
+  /* Triangle shape */
+  .triangle {
+    width: 150px;
+    height: 150px;
+    /* Remaining styles */
+  }
+  
+  /* Rectangle shape */
+  .rectangle {
+    width: 200px;
+    height: 120px;
+    /* Remaining styles */
+  }
+  
+  /* Ellipse shape */
+  .ellipse {
+    width: 120px;
+    height: 80px;
+    /* Remaining styles */
+  }
+  
+  /* Pentagon shape */
+  .pentagon {
+    width: 120px;
+    height: 120px;
+    /* Remaining styles */
+  }
+  
+  /* Star shape */
+  .star {
+    /* Adjust width and height using border properties */
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid rgba(203, 222, 255, 0.6);
+    /* Remaining styles */
+  }
+
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 5px 10px; /* Adjust this value to change the space between the <p> elements */
+    color: var(--secondary-color);
+  }
+  footer p a:hover {
+    color: #cbcbcb;
+  }
+
+  
+  header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  nav {
+    text-align: center;
+  }
+  nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease; /* Add transition for smooth color change */
+  }
+  nav a:hover {
+    color: #cbcbcb;
+  }
+
+  .dropbtn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Add transition for smooth color change */
+  }
+  
+  .dropbtn:hover {
+    color: #cbcbcb;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 4;
+    animation: fadeIn 0.5s forwards; /* Apply animation to fade in */
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Keyframes animation for fade in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Show the dropdown content */
+  .show {
+    display: block;
+  }
